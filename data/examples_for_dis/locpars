@@ -1,0 +1,20 @@
+& This is a file that gives locus information &
+
+& Comments may appear anywhere between a pair of 
+	"and" symbols.  &
+
+9  & This is the number of loci &
+
+& each locus is started with the number of alleles, followed by
+  the relative frequencies of alleles.  if the freqs don't sum to
+  one, they will be scaled so that they do.  &
+
+5   1 2 1 5  1 
+3  .45 .32 .23
+10  .2 .3 .1 .1 .1 .1 .4 .1 .5 .1  
+6  .12 .08 .23 .11 .2 .26  
+2  1 1
+8  3 7 2 2 5 1 9 1  
+5  .37 .01 .11 .48 .03  
+15 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  
+3  .333 .333 .333

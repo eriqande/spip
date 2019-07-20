@@ -1,0 +1,6 @@
+& genreic cat gtyp & 
+
+--newborn-samp 10 11 20 21 36 37 50 58
+--newborn-males-samp 5 5 5 5 5 5 10 10
+--newborn-fem-samp  5 5 5 5 5 5 10 10
+--locus-file locpars

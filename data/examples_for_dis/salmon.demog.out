@@ -1,0 +1,1054 @@
+INSERTING_COMMANDS_FROM_FILE : salmon.demog
+NEW_COMMAND_LINE_LOOKS_LIKE : spip -A 2 -T 10 -s .5 .7 -f 0 1 --fem-prob-repro 0 1 --initial-females 50 40 -m 0 1 --male-prob-repro 0 1 --initial-males 50 40 --fixed-cohort-size --cohort-size const 50 
+SETUP : MaxAge : 2
+SETUP : FemaleSurvivalRates : 0.50000 0.70000 
+SETUP : MaleSurvivalRates : 0.50000 0.70000 
+SETUP : FemaleAgeSpecificFecundities : 0.00000 1.00000 
+SETUP : MaleAgeSpecificFecundities : 0.00000 1.00000 
+SETUP : FemaleAgeSpecificProbabilitiesOfReproduction : 0.00000 1.00000 
+SETUP : MaleAgeSpecificProbabilitiesOfReproduction : 0.00000 1.00000 
+SETUP : FemaleAgeSpecificProbabilitiesOfPostReproductiveDeath : 0.00000 0.00000 
+SETUP : MaleAgeSpecificProbabilitiesOfPostReproductiveDeath : 0.00000 0.00000 
+SETUP : FemaleRatioOfMeanToVarianceOfOffspringNumber : 1.000000
+SETUP : MaleRatioOfMeanToVarianceOfOffspringNumber : 1.000000
+SETUP : MateFidelityParameter : -1.000000
+SETUP : SexRatio : 0.500000
+SETUP : OffspringDistribution : NegativeBinomial
+SETUP : CohortSizesRandomOrFixed : Fixed
+SETUP : DiscardBefore : 0
+SETUP : DiscardParentsOrAll : Parents
+SETUP : CohortSizeModel : Constant
+SETUP : ConstantCohortSize : 50
+SETUP : NumberOfYears : 10
+SUMMARY : StableAgeDistAges : 0 1 2 
+SUMMARY : FemaleStableAgeDist : 0.540541  0.270270  0.189189  
+SUMMARY : MaleStableAgeDist : 0.540541  0.270270  0.189189  
+SUMMARY : FemaleGenerationInterval : 2.000000
+SUMMARY : MaleGenerationInterval : 2.000000
+SUMMARY : BothSexesGenerationInterval : 2.000000
+SUMMARY : ExpectedNumoffsForBreedingFemales : 0.000000  5.714286  
+SUMMARY : ExpectedNumoffsForBreedingMales : 0.000000  5.714286  
+SUMMARY : ExpectedFemLifetimeOffspringOutput : 2.000000
+SUMMARY : ExpectedMaleLifetimeOffspringOutput : 2.000000
+SUMMARY : MaleVarianceInLifetimeReproduction : 9.428571
+SUMMARY : FemaleVarianceInLifetimeReproduction : 9.428571
+SUMMARY : HillsNeAssumingEqualSexRatio : 35.000000
+SUMMARY : HillsAnnualNeAssumingEqualSexRatio : 70.000000
+RANDOMSEEDS : Using contents of spip_seeds to set RNG: 324827829 1524760367
+MATE_SPECIFITY : Printing matrix of probability of number of "new" males paternal to sibship of given size.  This is the number of "dippings" into the pool of males
+MATE_SPECIFITY : 1 :	1.0000
+MATE_SPECIFITY : 2 : 	nan	nan	
+MATE_SPECIFITY : 3 : 	nan	nan	nan	
+MATE_SPECIFITY : 4 : 	nan	nan	nan	nan	
+MATE_SPECIFITY : 5 : 	nan	nan	nan	nan	nan	
+MATE_SPECIFITY : 6 : 	nan	nan	nan	nan	nan	nan	
+MATE_SPECIFITY : 7 : 	nan	nan	nan	nan	nan	nan	nan	
+MATE_SPECIFITY : 8 : 	nan	nan	nan	nan	nan	nan	nan	nan	
+MATE_SPECIFITY : 9 : 	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+MATE_SPECIFITY : 10 : 	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+MATE_SPECIFITY : 11 : 	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+MATE_SPECIFITY : 12 : 	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+MATE_SPECIFITY : 13 : 	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+MATE_SPECIFITY : 14 : 	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+MATE_SPECIFITY : 15 : 	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	nan	
+DISCARDED_PDGEE : 0 :  M0_0    0    0
+PEDIGREE : 0 :  M0_0    0    0
+DISCARDED_PDGEE : 0 :  M0_1    0    0
+PEDIGREE : 0 :  M0_1    0    0
+DISCARDED_PDGEE : 0 :  M0_2    0    0
+PEDIGREE : 0 :  M0_2    0    0
+DISCARDED_PDGEE : 0 :  M0_3    0    0
+PEDIGREE : 0 :  M0_3    0    0
+DISCARDED_PDGEE : 0 :  M0_4    0    0
+PEDIGREE : 0 :  M0_4    0    0
+DISCARDED_PDGEE : 0 :  M0_5    0    0
+PEDIGREE : 0 :  M0_5    0    0
+DISCARDED_PDGEE : 0 :  M0_6    0    0
+PEDIGREE : 0 :  M0_6    0    0
+DISCARDED_PDGEE : 0 :  M0_7    0    0
+PEDIGREE : 0 :  M0_7    0    0
+DISCARDED_PDGEE : 0 :  M0_8    0    0
+PEDIGREE : 0 :  M0_8    0    0
+DISCARDED_PDGEE : 0 :  M0_9    0    0
+PEDIGREE : 0 :  M0_9    0    0
+DISCARDED_PDGEE : 0 :  M0_10    0    0
+PEDIGREE : 0 :  M0_10    0    0
+DISCARDED_PDGEE : 0 :  M0_11    0    0
+PEDIGREE : 0 :  M0_11    0    0
+DISCARDED_PDGEE : 0 :  M0_12    0    0
+PEDIGREE : 0 :  M0_12    0    0
+DISCARDED_PDGEE : 0 :  M0_13    0    0
+PEDIGREE : 0 :  M0_13    0    0
+DISCARDED_PDGEE : 0 :  M0_14    0    0
+PEDIGREE : 0 :  M0_14    0    0
+DISCARDED_PDGEE : 0 :  M0_15    0    0
+PEDIGREE : 0 :  M0_15    0    0
+DISCARDED_PDGEE : 0 :  M0_16    0    0
+PEDIGREE : 0 :  M0_16    0    0
+DISCARDED_PDGEE : 0 :  M0_17    0    0
+PEDIGREE : 0 :  M0_17    0    0
+DISCARDED_PDGEE : 0 :  M0_18    0    0
+PEDIGREE : 0 :  M0_18    0    0
+DISCARDED_PDGEE : 0 :  M0_19    0    0
+PEDIGREE : 0 :  M0_19    0    0
+DISCARDED_PDGEE : 0 :  M0_20    0    0
+PEDIGREE : 0 :  M0_20    0    0
+DISCARDED_PDGEE : 0 :  M0_21    0    0
+PEDIGREE : 0 :  M0_21    0    0
+DISCARDED_PDGEE : 0 :  M0_22    0    0
+PEDIGREE : 0 :  M0_22    0    0
+DISCARDED_PDGEE : 0 :  M0_23    0    0
+PEDIGREE : 0 :  M0_23    0    0
+DISCARDED_PDGEE : 0 :  M0_24    0    0
+PEDIGREE : 0 :  M0_24    0    0
+DISCARDED_PDGEE : 0 :  M0_25    0    0
+PEDIGREE : 0 :  M0_25    0    0
+DISCARDED_PDGEE : 0 :  M0_26    0    0
+PEDIGREE : 0 :  M0_26    0    0
+DISCARDED_PDGEE : 0 :  M0_27    0    0
+PEDIGREE : 0 :  M0_27    0    0
+DISCARDED_PDGEE : 0 :  M0_28    0    0
+PEDIGREE : 0 :  M0_28    0    0
+DISCARDED_PDGEE : 0 :  M0_29    0    0
+PEDIGREE : 0 :  M0_29    0    0
+DISCARDED_PDGEE : 0 :  M0_30    0    0
+PEDIGREE : 0 :  M0_30    0    0
+DISCARDED_PDGEE : 0 :  M0_31    0    0
+PEDIGREE : 0 :  M0_31    0    0
+DISCARDED_PDGEE : 0 :  M0_32    0    0
+PEDIGREE : 0 :  M0_32    0    0
+DISCARDED_PDGEE : 0 :  M0_33    0    0
+PEDIGREE : 0 :  M0_33    0    0
+DISCARDED_PDGEE : 0 :  M0_34    0    0
+PEDIGREE : 0 :  M0_34    0    0
+DISCARDED_PDGEE : 0 :  M0_35    0    0
+PEDIGREE : 0 :  M0_35    0    0
+DISCARDED_PDGEE : 0 :  M0_36    0    0
+PEDIGREE : 0 :  M0_36    0    0
+DISCARDED_PDGEE : 0 :  M0_37    0    0
+PEDIGREE : 0 :  M0_37    0    0
+DISCARDED_PDGEE : 0 :  M0_38    0    0
+PEDIGREE : 0 :  M0_38    0    0
+DISCARDED_PDGEE : 0 :  M0_39    0    0
+PEDIGREE : 0 :  M0_39    0    0
+DISCARDED_PDGEE : 0 :  F0_0    0    0
+PEDIGREE : 0 :  F0_0    0    0
+DISCARDED_PDGEE : 0 :  F0_1    0    0
+PEDIGREE : 0 :  F0_1    0    0
+DISCARDED_PDGEE : 0 :  F0_2    0    0
+PEDIGREE : 0 :  F0_2    0    0
+DISCARDED_PDGEE : 0 :  F0_3    0    0
+PEDIGREE : 0 :  F0_3    0    0
+DISCARDED_PDGEE : 0 :  F0_4    0    0
+PEDIGREE : 0 :  F0_4    0    0
+DISCARDED_PDGEE : 0 :  F0_5    0    0
+PEDIGREE : 0 :  F0_5    0    0
+DISCARDED_PDGEE : 0 :  F0_6    0    0
+PEDIGREE : 0 :  F0_6    0    0
+DISCARDED_PDGEE : 0 :  F0_7    0    0
+PEDIGREE : 0 :  F0_7    0    0
+DISCARDED_PDGEE : 0 :  F0_8    0    0
+PEDIGREE : 0 :  F0_8    0    0
+DISCARDED_PDGEE : 0 :  F0_9    0    0
+PEDIGREE : 0 :  F0_9    0    0
+DISCARDED_PDGEE : 0 :  F0_10    0    0
+PEDIGREE : 0 :  F0_10    0    0
+DISCARDED_PDGEE : 0 :  F0_11    0    0
+PEDIGREE : 0 :  F0_11    0    0
+DISCARDED_PDGEE : 0 :  F0_12    0    0
+PEDIGREE : 0 :  F0_12    0    0
+DISCARDED_PDGEE : 0 :  F0_13    0    0
+PEDIGREE : 0 :  F0_13    0    0
+DISCARDED_PDGEE : 0 :  F0_14    0    0
+PEDIGREE : 0 :  F0_14    0    0
+DISCARDED_PDGEE : 0 :  F0_15    0    0
+PEDIGREE : 0 :  F0_15    0    0
+DISCARDED_PDGEE : 0 :  F0_16    0    0
+PEDIGREE : 0 :  F0_16    0    0
+DISCARDED_PDGEE : 0 :  F0_17    0    0
+PEDIGREE : 0 :  F0_17    0    0
+DISCARDED_PDGEE : 0 :  F0_18    0    0
+PEDIGREE : 0 :  F0_18    0    0
+DISCARDED_PDGEE : 0 :  F0_19    0    0
+PEDIGREE : 0 :  F0_19    0    0
+DISCARDED_PDGEE : 0 :  F0_20    0    0
+PEDIGREE : 0 :  F0_20    0    0
+DISCARDED_PDGEE : 0 :  F0_21    0    0
+PEDIGREE : 0 :  F0_21    0    0
+DISCARDED_PDGEE : 0 :  F0_22    0    0
+PEDIGREE : 0 :  F0_22    0    0
+DISCARDED_PDGEE : 0 :  F0_23    0    0
+PEDIGREE : 0 :  F0_23    0    0
+DISCARDED_PDGEE : 0 :  F0_24    0    0
+PEDIGREE : 0 :  F0_24    0    0
+DISCARDED_PDGEE : 0 :  F0_25    0    0
+PEDIGREE : 0 :  F0_25    0    0
+DISCARDED_PDGEE : 0 :  F0_26    0    0
+PEDIGREE : 0 :  F0_26    0    0
+DISCARDED_PDGEE : 0 :  F0_27    0    0
+PEDIGREE : 0 :  F0_27    0    0
+DISCARDED_PDGEE : 0 :  F0_28    0    0
+PEDIGREE : 0 :  F0_28    0    0
+DISCARDED_PDGEE : 0 :  F0_29    0    0
+PEDIGREE : 0 :  F0_29    0    0
+DISCARDED_PDGEE : 0 :  F0_30    0    0
+PEDIGREE : 0 :  F0_30    0    0
+DISCARDED_PDGEE : 0 :  F0_31    0    0
+PEDIGREE : 0 :  F0_31    0    0
+DISCARDED_PDGEE : 0 :  F0_32    0    0
+PEDIGREE : 0 :  F0_32    0    0
+DISCARDED_PDGEE : 0 :  F0_33    0    0
+PEDIGREE : 0 :  F0_33    0    0
+DISCARDED_PDGEE : 0 :  F0_34    0    0
+PEDIGREE : 0 :  F0_34    0    0
+DISCARDED_PDGEE : 0 :  F0_35    0    0
+PEDIGREE : 0 :  F0_35    0    0
+DISCARDED_PDGEE : 0 :  F0_36    0    0
+PEDIGREE : 0 :  F0_36    0    0
+DISCARDED_PDGEE : 0 :  F0_37    0    0
+PEDIGREE : 0 :  F0_37    0    0
+DISCARDED_PDGEE : 0 :  F0_38    0    0
+PEDIGREE : 0 :  F0_38    0    0
+DISCARDED_PDGEE : 0 :  F0_39    0    0
+PEDIGREE : 0 :  F0_39    0    0
+DISCARDED_PDGEE : 1 :  M1_0    0    0
+PEDIGREE : 1 :  M1_0    0    0
+DISCARDED_PDGEE : 1 :  M1_1    0    0
+PEDIGREE : 1 :  M1_1    0    0
+DISCARDED_PDGEE : 1 :  M1_2    0    0
+PEDIGREE : 1 :  M1_2    0    0
+DISCARDED_PDGEE : 1 :  M1_3    0    0
+PEDIGREE : 1 :  M1_3    0    0
+DISCARDED_PDGEE : 1 :  M1_4    0    0
+PEDIGREE : 1 :  M1_4    0    0
+DISCARDED_PDGEE : 1 :  M1_5    0    0
+PEDIGREE : 1 :  M1_5    0    0
+DISCARDED_PDGEE : 1 :  M1_6    0    0
+PEDIGREE : 1 :  M1_6    0    0
+DISCARDED_PDGEE : 1 :  M1_7    0    0
+PEDIGREE : 1 :  M1_7    0    0
+DISCARDED_PDGEE : 1 :  M1_8    0    0
+PEDIGREE : 1 :  M1_8    0    0
+DISCARDED_PDGEE : 1 :  M1_9    0    0
+PEDIGREE : 1 :  M1_9    0    0
+DISCARDED_PDGEE : 1 :  M1_10    0    0
+PEDIGREE : 1 :  M1_10    0    0
+DISCARDED_PDGEE : 1 :  M1_11    0    0
+PEDIGREE : 1 :  M1_11    0    0
+DISCARDED_PDGEE : 1 :  M1_12    0    0
+PEDIGREE : 1 :  M1_12    0    0
+DISCARDED_PDGEE : 1 :  M1_13    0    0
+PEDIGREE : 1 :  M1_13    0    0
+DISCARDED_PDGEE : 1 :  M1_14    0    0
+PEDIGREE : 1 :  M1_14    0    0
+DISCARDED_PDGEE : 1 :  M1_15    0    0
+PEDIGREE : 1 :  M1_15    0    0
+DISCARDED_PDGEE : 1 :  M1_16    0    0
+PEDIGREE : 1 :  M1_16    0    0
+DISCARDED_PDGEE : 1 :  M1_17    0    0
+PEDIGREE : 1 :  M1_17    0    0
+DISCARDED_PDGEE : 1 :  M1_18    0    0
+PEDIGREE : 1 :  M1_18    0    0
+DISCARDED_PDGEE : 1 :  M1_19    0    0
+PEDIGREE : 1 :  M1_19    0    0
+DISCARDED_PDGEE : 1 :  M1_20    0    0
+PEDIGREE : 1 :  M1_20    0    0
+DISCARDED_PDGEE : 1 :  M1_21    0    0
+PEDIGREE : 1 :  M1_21    0    0
+DISCARDED_PDGEE : 1 :  M1_22    0    0
+PEDIGREE : 1 :  M1_22    0    0
+DISCARDED_PDGEE : 1 :  M1_23    0    0
+PEDIGREE : 1 :  M1_23    0    0
+DISCARDED_PDGEE : 1 :  M1_24    0    0
+PEDIGREE : 1 :  M1_24    0    0
+DISCARDED_PDGEE : 1 :  M1_25    0    0
+PEDIGREE : 1 :  M1_25    0    0
+DISCARDED_PDGEE : 1 :  M1_26    0    0
+PEDIGREE : 1 :  M1_26    0    0
+DISCARDED_PDGEE : 1 :  M1_27    0    0
+PEDIGREE : 1 :  M1_27    0    0
+DISCARDED_PDGEE : 1 :  M1_28    0    0
+PEDIGREE : 1 :  M1_28    0    0
+DISCARDED_PDGEE : 1 :  M1_29    0    0
+PEDIGREE : 1 :  M1_29    0    0
+DISCARDED_PDGEE : 1 :  M1_30    0    0
+PEDIGREE : 1 :  M1_30    0    0
+DISCARDED_PDGEE : 1 :  M1_31    0    0
+PEDIGREE : 1 :  M1_31    0    0
+DISCARDED_PDGEE : 1 :  M1_32    0    0
+PEDIGREE : 1 :  M1_32    0    0
+DISCARDED_PDGEE : 1 :  M1_33    0    0
+PEDIGREE : 1 :  M1_33    0    0
+DISCARDED_PDGEE : 1 :  M1_34    0    0
+PEDIGREE : 1 :  M1_34    0    0
+DISCARDED_PDGEE : 1 :  M1_35    0    0
+PEDIGREE : 1 :  M1_35    0    0
+DISCARDED_PDGEE : 1 :  M1_36    0    0
+PEDIGREE : 1 :  M1_36    0    0
+DISCARDED_PDGEE : 1 :  M1_37    0    0
+PEDIGREE : 1 :  M1_37    0    0
+DISCARDED_PDGEE : 1 :  M1_38    0    0
+PEDIGREE : 1 :  M1_38    0    0
+DISCARDED_PDGEE : 1 :  M1_39    0    0
+PEDIGREE : 1 :  M1_39    0    0
+DISCARDED_PDGEE : 1 :  M1_40    0    0
+PEDIGREE : 1 :  M1_40    0    0
+DISCARDED_PDGEE : 1 :  M1_41    0    0
+PEDIGREE : 1 :  M1_41    0    0
+DISCARDED_PDGEE : 1 :  M1_42    0    0
+PEDIGREE : 1 :  M1_42    0    0
+DISCARDED_PDGEE : 1 :  M1_43    0    0
+PEDIGREE : 1 :  M1_43    0    0
+DISCARDED_PDGEE : 1 :  M1_44    0    0
+PEDIGREE : 1 :  M1_44    0    0
+DISCARDED_PDGEE : 1 :  M1_45    0    0
+PEDIGREE : 1 :  M1_45    0    0
+DISCARDED_PDGEE : 1 :  M1_46    0    0
+PEDIGREE : 1 :  M1_46    0    0
+DISCARDED_PDGEE : 1 :  M1_47    0    0
+PEDIGREE : 1 :  M1_47    0    0
+DISCARDED_PDGEE : 1 :  M1_48    0    0
+PEDIGREE : 1 :  M1_48    0    0
+DISCARDED_PDGEE : 1 :  M1_49    0    0
+PEDIGREE : 1 :  M1_49    0    0
+DISCARDED_PDGEE : 1 :  F1_0    0    0
+PEDIGREE : 1 :  F1_0    0    0
+DISCARDED_PDGEE : 1 :  F1_1    0    0
+PEDIGREE : 1 :  F1_1    0    0
+DISCARDED_PDGEE : 1 :  F1_2    0    0
+PEDIGREE : 1 :  F1_2    0    0
+DISCARDED_PDGEE : 1 :  F1_3    0    0
+PEDIGREE : 1 :  F1_3    0    0
+DISCARDED_PDGEE : 1 :  F1_4    0    0
+PEDIGREE : 1 :  F1_4    0    0
+DISCARDED_PDGEE : 1 :  F1_5    0    0
+PEDIGREE : 1 :  F1_5    0    0
+DISCARDED_PDGEE : 1 :  F1_6    0    0
+PEDIGREE : 1 :  F1_6    0    0
+DISCARDED_PDGEE : 1 :  F1_7    0    0
+PEDIGREE : 1 :  F1_7    0    0
+DISCARDED_PDGEE : 1 :  F1_8    0    0
+PEDIGREE : 1 :  F1_8    0    0
+DISCARDED_PDGEE : 1 :  F1_9    0    0
+PEDIGREE : 1 :  F1_9    0    0
+DISCARDED_PDGEE : 1 :  F1_10    0    0
+PEDIGREE : 1 :  F1_10    0    0
+DISCARDED_PDGEE : 1 :  F1_11    0    0
+PEDIGREE : 1 :  F1_11    0    0
+DISCARDED_PDGEE : 1 :  F1_12    0    0
+PEDIGREE : 1 :  F1_12    0    0
+DISCARDED_PDGEE : 1 :  F1_13    0    0
+PEDIGREE : 1 :  F1_13    0    0
+DISCARDED_PDGEE : 1 :  F1_14    0    0
+PEDIGREE : 1 :  F1_14    0    0
+DISCARDED_PDGEE : 1 :  F1_15    0    0
+PEDIGREE : 1 :  F1_15    0    0
+DISCARDED_PDGEE : 1 :  F1_16    0    0
+PEDIGREE : 1 :  F1_16    0    0
+DISCARDED_PDGEE : 1 :  F1_17    0    0
+PEDIGREE : 1 :  F1_17    0    0
+DISCARDED_PDGEE : 1 :  F1_18    0    0
+PEDIGREE : 1 :  F1_18    0    0
+DISCARDED_PDGEE : 1 :  F1_19    0    0
+PEDIGREE : 1 :  F1_19    0    0
+DISCARDED_PDGEE : 1 :  F1_20    0    0
+PEDIGREE : 1 :  F1_20    0    0
+DISCARDED_PDGEE : 1 :  F1_21    0    0
+PEDIGREE : 1 :  F1_21    0    0
+DISCARDED_PDGEE : 1 :  F1_22    0    0
+PEDIGREE : 1 :  F1_22    0    0
+DISCARDED_PDGEE : 1 :  F1_23    0    0
+PEDIGREE : 1 :  F1_23    0    0
+DISCARDED_PDGEE : 1 :  F1_24    0    0
+PEDIGREE : 1 :  F1_24    0    0
+DISCARDED_PDGEE : 1 :  F1_25    0    0
+PEDIGREE : 1 :  F1_25    0    0
+DISCARDED_PDGEE : 1 :  F1_26    0    0
+PEDIGREE : 1 :  F1_26    0    0
+DISCARDED_PDGEE : 1 :  F1_27    0    0
+PEDIGREE : 1 :  F1_27    0    0
+DISCARDED_PDGEE : 1 :  F1_28    0    0
+PEDIGREE : 1 :  F1_28    0    0
+DISCARDED_PDGEE : 1 :  F1_29    0    0
+PEDIGREE : 1 :  F1_29    0    0
+DISCARDED_PDGEE : 1 :  F1_30    0    0
+PEDIGREE : 1 :  F1_30    0    0
+DISCARDED_PDGEE : 1 :  F1_31    0    0
+PEDIGREE : 1 :  F1_31    0    0
+DISCARDED_PDGEE : 1 :  F1_32    0    0
+PEDIGREE : 1 :  F1_32    0    0
+DISCARDED_PDGEE : 1 :  F1_33    0    0
+PEDIGREE : 1 :  F1_33    0    0
+DISCARDED_PDGEE : 1 :  F1_34    0    0
+PEDIGREE : 1 :  F1_34    0    0
+DISCARDED_PDGEE : 1 :  F1_35    0    0
+PEDIGREE : 1 :  F1_35    0    0
+DISCARDED_PDGEE : 1 :  F1_36    0    0
+PEDIGREE : 1 :  F1_36    0    0
+DISCARDED_PDGEE : 1 :  F1_37    0    0
+PEDIGREE : 1 :  F1_37    0    0
+DISCARDED_PDGEE : 1 :  F1_38    0    0
+PEDIGREE : 1 :  F1_38    0    0
+DISCARDED_PDGEE : 1 :  F1_39    0    0
+PEDIGREE : 1 :  F1_39    0    0
+DISCARDED_PDGEE : 1 :  F1_40    0    0
+PEDIGREE : 1 :  F1_40    0    0
+DISCARDED_PDGEE : 1 :  F1_41    0    0
+PEDIGREE : 1 :  F1_41    0    0
+DISCARDED_PDGEE : 1 :  F1_42    0    0
+PEDIGREE : 1 :  F1_42    0    0
+DISCARDED_PDGEE : 1 :  F1_43    0    0
+PEDIGREE : 1 :  F1_43    0    0
+DISCARDED_PDGEE : 1 :  F1_44    0    0
+PEDIGREE : 1 :  F1_44    0    0
+DISCARDED_PDGEE : 1 :  F1_45    0    0
+PEDIGREE : 1 :  F1_45    0    0
+DISCARDED_PDGEE : 1 :  F1_46    0    0
+PEDIGREE : 1 :  F1_46    0    0
+DISCARDED_PDGEE : 1 :  F1_47    0    0
+PEDIGREE : 1 :  F1_47    0    0
+DISCARDED_PDGEE : 1 :  F1_48    0    0
+PEDIGREE : 1 :  F1_48    0    0
+DISCARDED_PDGEE : 1 :  F1_49    0    0
+PEDIGREE : 1 :  F1_49    0    0
+PREKILL_CENSUS_AGES :           2  :	0	1
+PREKILL_CENSUS_COUNTS : MALES  : 2  :	50	40
+PREKILL_CENSUS_COUNTS : FEM    : 2  :	50	40
+POSTKILL_CENSUS_AGES :           2  :	1	2
+POSTKILL_CENSUS_COUNTS : MALES  : 2  :	29	23
+POSTKILL_CENSUS_COUNTS : FEM    : 2  :	21	33
+
+VERBIAGE :   Entering MakeBabies : t=2     N=50
+VERBIAGE :  Mean Num Offspring per Female  (NumFemalesRemaining) and [ProbOfReproducing] of Different Ages  : 0.000 ( 21 ) [ 0.000 ]    1.515 ( 33 ) [ 1.000 ]    
+PEDIGREE : 2 :  F2_0    M0_22    F0_5
+PEDIGREE : 2 :  F2_1    M0_21    F0_7
+PEDIGREE : 2 :  F2_2    M0_21    F0_7
+PEDIGREE : 2 :  F2_3    M0_6    F0_7
+PEDIGREE : 2 :  M2_0    M0_22    F0_7
+PEDIGREE : 2 :  F2_4    M0_24    F0_8
+PEDIGREE : 2 :  M2_1    M0_22    F0_8
+PEDIGREE : 2 :  M2_2    M0_13    F0_8
+PEDIGREE : 2 :  F2_5    M0_16    F0_9
+PEDIGREE : 2 :  F2_6    M0_22    F0_11
+PEDIGREE : 2 :  M2_3    M0_16    F0_11
+PEDIGREE : 2 :  M2_4    M0_22    F0_11
+PEDIGREE : 2 :  F2_7    M0_13    F0_15
+PEDIGREE : 2 :  F2_8    M0_4    F0_15
+PEDIGREE : 2 :  M2_5    M0_8    F0_15
+PEDIGREE : 2 :  F2_9    M0_17    F0_16
+PEDIGREE : 2 :  M2_6    M0_8    F0_16
+PEDIGREE : 2 :  M2_7    M0_17    F0_17
+PEDIGREE : 2 :  F2_10    M0_25    F0_18
+PEDIGREE : 2 :  F2_11    M0_3    F0_18
+PEDIGREE : 2 :  F2_12    M0_20    F0_18
+PEDIGREE : 2 :  F2_13    M0_6    F0_19
+PEDIGREE : 2 :  F2_14    M0_5    F0_21
+PEDIGREE : 2 :  F2_15    M0_1    F0_21
+PEDIGREE : 2 :  M2_8    M0_25    F0_21
+PEDIGREE : 2 :  M2_9    M0_35    F0_21
+PEDIGREE : 2 :  M2_10    M0_25    F0_23
+PEDIGREE : 2 :  M2_11    M0_21    F0_23
+PEDIGREE : 2 :  F2_16    M0_24    F0_24
+PEDIGREE : 2 :  F2_17    M0_35    F0_25
+PEDIGREE : 2 :  F2_18    M0_37    F0_25
+PEDIGREE : 2 :  F2_19    M0_5    F0_27
+PEDIGREE : 2 :  M2_12    M0_13    F0_27
+PEDIGREE : 2 :  F2_20    M0_20    F0_30
+PEDIGREE : 2 :  M2_13    M0_5    F0_32
+PEDIGREE : 2 :  F2_21    M0_19    F0_33
+PEDIGREE : 2 :  M2_14    M0_25    F0_33
+PEDIGREE : 2 :  F2_22    M0_16    F0_34
+PEDIGREE : 2 :  M2_15    M0_4    F0_34
+PEDIGREE : 2 :  M2_16    M0_6    F0_34
+PEDIGREE : 2 :  F2_23    M0_7    F0_35
+PEDIGREE : 2 :  F2_24    M0_18    F0_35
+PEDIGREE : 2 :  F2_25    M0_20    F0_35
+PEDIGREE : 2 :  F2_26    M0_1    F0_35
+PEDIGREE : 2 :  M2_17    M0_24    F0_35
+PEDIGREE : 2 :  F2_27    M0_21    F0_38
+PEDIGREE : 2 :  M2_18    M0_13    F0_38
+PEDIGREE : 2 :  M2_19    M0_24    F0_38
+PEDIGREE : 2 :  F2_28    M0_24    F0_39
+PEDIGREE : 2 :  M2_20    M0_3    F0_39
+VERBIAGE : Done with this generation
+VERBIAGE :  Exiting MakeBabies()
+POST_REPROD_CENSUS_AGES :           2  :	1	2
+POST_REPROD_CENSUS_COUNTS : MALES  : 2  :	29	23
+POST_REPROD_CENSUS_COUNTS : FEM    : 2  :	21	33
+PREKILL_CENSUS_AGES :           3  :	0	1
+PREKILL_CENSUS_COUNTS : MALES  : 3  :	21	29
+PREKILL_CENSUS_COUNTS : FEM    : 3  :	29	21
+POSTKILL_CENSUS_AGES :           3  :	1	2
+POSTKILL_CENSUS_COUNTS : MALES  : 3  :	12	20
+POSTKILL_CENSUS_COUNTS : FEM    : 3  :	14	15
+
+VERBIAGE :   Entering MakeBabies : t=3     N=50
+VERBIAGE :  Mean Num Offspring per Female  (NumFemalesRemaining) and [ProbOfReproducing] of Different Ages  : 0.000 ( 14 ) [ 0.000 ]    3.333 ( 15 ) [ 1.000 ]    
+PEDIGREE : 3 :  F3_0    M1_0    F1_0
+PEDIGREE : 3 :  F3_1    M1_30    F1_0
+PEDIGREE : 3 :  F3_2    M1_19    F1_0
+PEDIGREE : 3 :  M3_0    M1_13    F1_0
+PEDIGREE : 3 :  M3_1    M1_23    F1_0
+PEDIGREE : 3 :  M3_2    M1_26    F1_7
+PEDIGREE : 3 :  M3_3    M1_9    F1_7
+PEDIGREE : 3 :  F3_3    M1_2    F1_11
+PEDIGREE : 3 :  M3_4    M1_39    F1_11
+PEDIGREE : 3 :  F3_4    M1_38    F1_15
+PEDIGREE : 3 :  M3_5    M1_44    F1_15
+PEDIGREE : 3 :  M3_6    M1_16    F1_15
+PEDIGREE : 3 :  M3_7    M1_11    F1_16
+PEDIGREE : 3 :  M3_8    M1_18    F1_16
+PEDIGREE : 3 :  M3_9    M1_39    F1_17
+PEDIGREE : 3 :  F3_5    M1_30    F1_18
+PEDIGREE : 3 :  F3_6    M1_34    F1_18
+PEDIGREE : 3 :  F3_7    M1_0    F1_18
+PEDIGREE : 3 :  M3_10    M1_16    F1_18
+PEDIGREE : 3 :  M3_11    M1_30    F1_18
+PEDIGREE : 3 :  F3_8    M1_44    F1_26
+PEDIGREE : 3 :  F3_9    M1_2    F1_26
+PEDIGREE : 3 :  M3_12    M1_39    F1_26
+PEDIGREE : 3 :  M3_13    M1_38    F1_26
+PEDIGREE : 3 :  M3_14    M1_42    F1_26
+PEDIGREE : 3 :  M3_15    M1_38    F1_26
+PEDIGREE : 3 :  M3_16    M1_18    F1_26
+PEDIGREE : 3 :  F3_10    M1_23    F1_27
+PEDIGREE : 3 :  F3_11    M1_34    F1_27
+PEDIGREE : 3 :  F3_12    M1_41    F1_27
+PEDIGREE : 3 :  F3_13    M1_23    F1_32
+PEDIGREE : 3 :  F3_14    M1_30    F1_32
+PEDIGREE : 3 :  F3_15    M1_44    F1_35
+PEDIGREE : 3 :  M3_17    M1_42    F1_35
+PEDIGREE : 3 :  M3_18    M1_0    F1_35
+PEDIGREE : 3 :  M3_19    M1_42    F1_35
+PEDIGREE : 3 :  F3_16    M1_16    F1_37
+PEDIGREE : 3 :  F3_17    M1_19    F1_37
+PEDIGREE : 3 :  F3_18    M1_34    F1_37
+PEDIGREE : 3 :  M3_20    M1_9    F1_37
+PEDIGREE : 3 :  M3_21    M1_2    F1_37
+PEDIGREE : 3 :  F3_19    M1_19    F1_38
+PEDIGREE : 3 :  M3_22    M1_18    F1_38
+PEDIGREE : 3 :  F3_20    M1_23    F1_46
+PEDIGREE : 3 :  F3_21    M1_33    F1_46
+PEDIGREE : 3 :  F3_22    M1_18    F1_46
+PEDIGREE : 3 :  F3_23    M1_48    F1_46
+PEDIGREE : 3 :  M3_23    M1_42    F1_46
+PEDIGREE : 3 :  M3_24    M1_30    F1_46
+PEDIGREE : 3 :  F3_24    M1_0    F1_49
+VERBIAGE : Done with this generation
+VERBIAGE :  Exiting MakeBabies()
+POST_REPROD_CENSUS_AGES :           3  :	1	2
+POST_REPROD_CENSUS_COUNTS : MALES  : 3  :	12	20
+POST_REPROD_CENSUS_COUNTS : FEM    : 3  :	14	15
+PREKILL_CENSUS_AGES :           4  :	0	1
+PREKILL_CENSUS_COUNTS : MALES  : 4  :	25	12
+PREKILL_CENSUS_COUNTS : FEM    : 4  :	25	14
+POSTKILL_CENSUS_AGES :           4  :	1	2
+POSTKILL_CENSUS_COUNTS : MALES  : 4  :	11	7
+POSTKILL_CENSUS_COUNTS : FEM    : 4  :	15	7
+
+VERBIAGE :   Entering MakeBabies : t=4     N=50
+VERBIAGE :  Mean Num Offspring per Female  (NumFemalesRemaining) and [ProbOfReproducing] of Different Ages  : 0.000 ( 15 ) [ 0.000 ]    7.143 ( 7 ) [ 1.000 ]    
+PEDIGREE : 4 :  F4_0    M2_9    F2_6
+PEDIGREE : 4 :  F4_1    M2_0    F2_6
+PEDIGREE : 4 :  F4_2    M2_11    F2_6
+PEDIGREE : 4 :  F4_3    M2_19    F2_6
+PEDIGREE : 4 :  M4_0    M2_9    F2_6
+PEDIGREE : 4 :  F4_4    M2_11    F2_9
+PEDIGREE : 4 :  F4_5    M2_20    F2_9
+PEDIGREE : 4 :  F4_6    M2_17    F2_9
+PEDIGREE : 4 :  M4_1    M2_17    F2_9
+PEDIGREE : 4 :  M4_2    M2_9    F2_9
+PEDIGREE : 4 :  M4_3    M2_20    F2_9
+PEDIGREE : 4 :  M4_4    M2_17    F2_9
+PEDIGREE : 4 :  M4_5    M2_20    F2_9
+PEDIGREE : 4 :  M4_6    M2_11    F2_9
+PEDIGREE : 4 :  F4_7    M2_9    F2_12
+PEDIGREE : 4 :  M4_7    M2_9    F2_12
+PEDIGREE : 4 :  M4_8    M2_11    F2_12
+PEDIGREE : 4 :  M4_9    M2_17    F2_12
+PEDIGREE : 4 :  M4_10    M2_11    F2_12
+PEDIGREE : 4 :  M4_11    M2_11    F2_12
+PEDIGREE : 4 :  F4_8    M2_20    F2_17
+PEDIGREE : 4 :  F4_9    M2_17    F2_17
+PEDIGREE : 4 :  M4_12    M2_0    F2_17
+PEDIGREE : 4 :  M4_13    M2_9    F2_17
+PEDIGREE : 4 :  M4_14    M2_6    F2_17
+PEDIGREE : 4 :  F4_10    M2_20    F2_20
+PEDIGREE : 4 :  F4_11    M2_6    F2_20
+PEDIGREE : 4 :  F4_12    M2_20    F2_20
+PEDIGREE : 4 :  F4_13    M2_17    F2_20
+PEDIGREE : 4 :  M4_15    M2_0    F2_20
+PEDIGREE : 4 :  M4_16    M2_20    F2_20
+PEDIGREE : 4 :  M4_17    M2_6    F2_20
+PEDIGREE : 4 :  M4_18    M2_0    F2_20
+PEDIGREE : 4 :  M4_19    M2_19    F2_20
+PEDIGREE : 4 :  F4_14    M2_17    F2_24
+PEDIGREE : 4 :  F4_15    M2_9    F2_24
+PEDIGREE : 4 :  M4_20    M2_19    F2_24
+PEDIGREE : 4 :  M4_21    M2_19    F2_24
+PEDIGREE : 4 :  M4_22    M2_20    F2_24
+PEDIGREE : 4 :  F4_16    M2_17    F2_28
+PEDIGREE : 4 :  F4_17    M2_17    F2_28
+PEDIGREE : 4 :  F4_18    M2_0    F2_28
+PEDIGREE : 4 :  F4_19    M2_17    F2_28
+PEDIGREE : 4 :  M4_23    M2_6    F2_28
+PEDIGREE : 4 :  M4_24    M2_19    F2_28
+PEDIGREE : 4 :  M4_25    M2_0    F2_28
+PEDIGREE : 4 :  M4_26    M2_19    F2_28
+PEDIGREE : 4 :  M4_27    M2_20    F2_28
+PEDIGREE : 4 :  M4_28    M2_20    F2_28
+PEDIGREE : 4 :  M4_29    M2_17    F2_28
+VERBIAGE : Done with this generation
+VERBIAGE :  Exiting MakeBabies()
+POST_REPROD_CENSUS_AGES :           4  :	1	2
+POST_REPROD_CENSUS_COUNTS : MALES  : 4  :	11	7
+POST_REPROD_CENSUS_COUNTS : FEM    : 4  :	15	7
+PREKILL_CENSUS_AGES :           5  :	0	1
+PREKILL_CENSUS_COUNTS : MALES  : 5  :	30	11
+PREKILL_CENSUS_COUNTS : FEM    : 5  :	20	15
+POSTKILL_CENSUS_AGES :           5  :	1	2
+POSTKILL_CENSUS_COUNTS : MALES  : 5  :	12	7
+POSTKILL_CENSUS_COUNTS : FEM    : 5  :	13	10
+
+VERBIAGE :   Entering MakeBabies : t=5     N=50
+VERBIAGE :  Mean Num Offspring per Female  (NumFemalesRemaining) and [ProbOfReproducing] of Different Ages  : 0.000 ( 13 ) [ 0.000 ]    5.000 ( 10 ) [ 1.000 ]    
+PEDIGREE : 5 :  F5_0    M3_16    F3_0
+PEDIGREE : 5 :  F5_1    M3_11    F3_0
+PEDIGREE : 5 :  F5_2    M3_7    F3_0
+PEDIGREE : 5 :  M5_0    M3_7    F3_0
+PEDIGREE : 5 :  F5_3    M3_6    F3_6
+PEDIGREE : 5 :  M5_1    M3_11    F3_6
+PEDIGREE : 5 :  M5_2    M3_11    F3_6
+PEDIGREE : 5 :  M5_3    M3_16    F3_6
+PEDIGREE : 5 :  M5_4    M3_22    F3_6
+PEDIGREE : 5 :  F5_4    M3_14    F3_11
+PEDIGREE : 5 :  F5_5    M3_22    F3_11
+PEDIGREE : 5 :  M5_5    M3_22    F3_11
+PEDIGREE : 5 :  F5_6    M3_6    F3_12
+PEDIGREE : 5 :  F5_7    M3_14    F3_12
+PEDIGREE : 5 :  F5_8    M3_6    F3_12
+PEDIGREE : 5 :  F5_9    M3_7    F3_12
+PEDIGREE : 5 :  M5_6    M3_3    F3_12
+PEDIGREE : 5 :  M5_7    M3_22    F3_12
+PEDIGREE : 5 :  M5_8    M3_11    F3_12
+PEDIGREE : 5 :  F5_10    M3_16    F3_14
+PEDIGREE : 5 :  F5_11    M3_7    F3_14
+PEDIGREE : 5 :  M5_9    M3_14    F3_14
+PEDIGREE : 5 :  M5_10    M3_22    F3_14
+PEDIGREE : 5 :  M5_11    M3_11    F3_14
+PEDIGREE : 5 :  F5_12    M3_6    F3_20
+PEDIGREE : 5 :  F5_13    M3_6    F3_20
+PEDIGREE : 5 :  F5_14    M3_22    F3_20
+PEDIGREE : 5 :  M5_12    M3_7    F3_20
+PEDIGREE : 5 :  M5_13    M3_16    F3_20
+PEDIGREE : 5 :  F5_15    M3_7    F3_21
+PEDIGREE : 5 :  F5_16    M3_16    F3_21
+PEDIGREE : 5 :  F5_17    M3_22    F3_21
+PEDIGREE : 5 :  M5_14    M3_16    F3_21
+PEDIGREE : 5 :  M5_15    M3_22    F3_21
+PEDIGREE : 5 :  F5_18    M3_7    F3_23
+PEDIGREE : 5 :  F5_19    M3_3    F3_23
+PEDIGREE : 5 :  F5_20    M3_7    F3_23
+PEDIGREE : 5 :  F5_21    M3_11    F3_23
+PEDIGREE : 5 :  M5_16    M3_6    F3_23
+PEDIGREE : 5 :  M5_17    M3_14    F3_23
+PEDIGREE : 5 :  M5_18    M3_16    F3_23
+PEDIGREE : 5 :  M5_19    M3_16    F3_23
+PEDIGREE : 5 :  F5_22    M3_16    F3_24
+PEDIGREE : 5 :  F5_23    M3_16    F3_24
+PEDIGREE : 5 :  F5_24    M3_14    F3_24
+PEDIGREE : 5 :  F5_25    M3_6    F3_24
+PEDIGREE : 5 :  M5_20    M3_3    F3_24
+PEDIGREE : 5 :  M5_21    M3_3    F3_24
+PEDIGREE : 5 :  M5_22    M3_6    F3_24
+PEDIGREE : 5 :  M5_23    M3_16    F3_24
+VERBIAGE : Done with this generation
+VERBIAGE :  Exiting MakeBabies()
+POST_REPROD_CENSUS_AGES :           5  :	1	2
+POST_REPROD_CENSUS_COUNTS : MALES  : 5  :	12	7
+POST_REPROD_CENSUS_COUNTS : FEM    : 5  :	13	10
+PREKILL_CENSUS_AGES :           6  :	0	1
+PREKILL_CENSUS_COUNTS : MALES  : 6  :	24	12
+PREKILL_CENSUS_COUNTS : FEM    : 6  :	26	13
+POSTKILL_CENSUS_AGES :           6  :	1	2
+POSTKILL_CENSUS_COUNTS : MALES  : 6  :	14	10
+POSTKILL_CENSUS_COUNTS : FEM    : 6  :	10	9
+
+VERBIAGE :   Entering MakeBabies : t=6     N=50
+VERBIAGE :  Mean Num Offspring per Female  (NumFemalesRemaining) and [ProbOfReproducing] of Different Ages  : 0.000 ( 10 ) [ 0.000 ]    5.556 ( 9 ) [ 1.000 ]    
+PEDIGREE : 6 :  F6_0    M4_18    F4_0
+PEDIGREE : 6 :  F6_1    M4_7    F4_0
+PEDIGREE : 6 :  F6_2    M4_11    F4_0
+PEDIGREE : 6 :  M6_0    M4_7    F4_0
+PEDIGREE : 6 :  F6_3    M4_16    F4_2
+PEDIGREE : 6 :  F6_4    M4_5    F4_2
+PEDIGREE : 6 :  F6_5    M4_22    F4_2
+PEDIGREE : 6 :  M6_1    M4_6    F4_2
+PEDIGREE : 6 :  F6_6    M4_6    F4_6
+PEDIGREE : 6 :  F6_7    M4_5    F4_6
+PEDIGREE : 6 :  F6_8    M4_18    F4_6
+PEDIGREE : 6 :  M6_2    M4_16    F4_6
+PEDIGREE : 6 :  M6_3    M4_13    F4_6
+PEDIGREE : 6 :  F6_9    M4_11    F4_8
+PEDIGREE : 6 :  F6_10    M4_25    F4_8
+PEDIGREE : 6 :  F6_11    M4_6    F4_8
+PEDIGREE : 6 :  F6_12    M4_8    F4_8
+PEDIGREE : 6 :  F6_13    M4_13    F4_8
+PEDIGREE : 6 :  F6_14    M4_13    F4_8
+PEDIGREE : 6 :  M6_4    M4_22    F4_8
+PEDIGREE : 6 :  F6_15    M4_5    F4_9
+PEDIGREE : 6 :  F6_16    M4_6    F4_9
+PEDIGREE : 6 :  F6_17    M4_5    F4_9
+PEDIGREE : 6 :  F6_18    M4_18    F4_9
+PEDIGREE : 6 :  M6_5    M4_5    F4_9
+PEDIGREE : 6 :  M6_6    M4_11    F4_9
+PEDIGREE : 6 :  M6_7    M4_7    F4_9
+PEDIGREE : 6 :  F6_19    M4_8    F4_11
+PEDIGREE : 6 :  F6_20    M4_7    F4_11
+PEDIGREE : 6 :  M6_8    M4_25    F4_12
+PEDIGREE : 6 :  M6_9    M4_8    F4_12
+PEDIGREE : 6 :  M6_10    M4_5    F4_12
+PEDIGREE : 6 :  M6_11    M4_22    F4_12
+PEDIGREE : 6 :  F6_21    M4_18    F4_16
+PEDIGREE : 6 :  F6_22    M4_7    F4_16
+PEDIGREE : 6 :  F6_23    M4_25    F4_16
+PEDIGREE : 6 :  M6_12    M4_5    F4_16
+PEDIGREE : 6 :  M6_13    M4_6    F4_16
+PEDIGREE : 6 :  F6_24    M4_6    F4_19
+PEDIGREE : 6 :  F6_25    M4_13    F4_19
+PEDIGREE : 6 :  M6_14    M4_13    F4_19
+PEDIGREE : 6 :  M6_15    M4_7    F4_19
+PEDIGREE : 6 :  M6_16    M4_5    F4_19
+PEDIGREE : 6 :  M6_17    M4_7    F4_19
+PEDIGREE : 6 :  M6_18    M4_16    F4_19
+PEDIGREE : 6 :  M6_19    M4_8    F4_19
+PEDIGREE : 6 :  M6_20    M4_16    F4_19
+PEDIGREE : 6 :  M6_21    M4_25    F4_19
+PEDIGREE : 6 :  M6_22    M4_16    F4_19
+PEDIGREE : 6 :  M6_23    M4_22    F4_19
+VERBIAGE : Done with this generation
+VERBIAGE :  Exiting MakeBabies()
+POST_REPROD_CENSUS_AGES :           6  :	1	2
+POST_REPROD_CENSUS_COUNTS : MALES  : 6  :	14	10
+POST_REPROD_CENSUS_COUNTS : FEM    : 6  :	10	9
+PREKILL_CENSUS_AGES :           7  :	0	1
+PREKILL_CENSUS_COUNTS : MALES  : 7  :	24	14
+PREKILL_CENSUS_COUNTS : FEM    : 7  :	26	10
+POSTKILL_CENSUS_AGES :           7  :	1	2
+POSTKILL_CENSUS_COUNTS : MALES  : 7  :	14	11
+POSTKILL_CENSUS_COUNTS : FEM    : 7  :	14	8
+
+VERBIAGE :   Entering MakeBabies : t=7     N=50
+VERBIAGE :  Mean Num Offspring per Female  (NumFemalesRemaining) and [ProbOfReproducing] of Different Ages  : 0.000 ( 14 ) [ 0.000 ]    6.250 ( 8 ) [ 1.000 ]    
+PEDIGREE : 7 :  F7_0    M5_16    F5_10
+PEDIGREE : 7 :  F7_1    M5_3    F5_10
+PEDIGREE : 7 :  F7_2    M5_17    F5_10
+PEDIGREE : 7 :  M7_0    M5_17    F5_10
+PEDIGREE : 7 :  M7_1    M5_3    F5_10
+PEDIGREE : 7 :  M7_2    M5_5    F5_10
+PEDIGREE : 7 :  F7_3    M5_10    F5_13
+PEDIGREE : 7 :  F7_4    M5_20    F5_13
+PEDIGREE : 7 :  F7_5    M5_14    F5_13
+PEDIGREE : 7 :  M7_3    M5_8    F5_13
+PEDIGREE : 7 :  M7_4    M5_5    F5_13
+PEDIGREE : 7 :  M7_5    M5_3    F5_13
+PEDIGREE : 7 :  M7_6    M5_14    F5_13
+PEDIGREE : 7 :  M7_7    M5_11    F5_13
+PEDIGREE : 7 :  F7_6    M5_11    F5_15
+PEDIGREE : 7 :  F7_7    M5_14    F5_15
+PEDIGREE : 7 :  F7_8    M5_10    F5_15
+PEDIGREE : 7 :  M7_8    M5_6    F5_15
+PEDIGREE : 7 :  M7_9    M5_11    F5_15
+PEDIGREE : 7 :  M7_10    M5_14    F5_15
+PEDIGREE : 7 :  M7_11    M5_16    F5_15
+PEDIGREE : 7 :  M7_12    M5_17    F5_15
+PEDIGREE : 7 :  F7_9    M5_11    F5_16
+PEDIGREE : 7 :  F7_10    M5_20    F5_16
+PEDIGREE : 7 :  M7_13    M5_6    F5_16
+PEDIGREE : 7 :  M7_14    M5_8    F5_16
+PEDIGREE : 7 :  M7_15    M5_7    F5_16
+PEDIGREE : 7 :  M7_16    M5_16    F5_16
+PEDIGREE : 7 :  M7_17    M5_20    F5_16
+PEDIGREE : 7 :  F7_11    M5_7    F5_20
+PEDIGREE : 7 :  F7_12    M5_10    F5_20
+PEDIGREE : 7 :  M7_18    M5_20    F5_20
+PEDIGREE : 7 :  M7_19    M5_14    F5_20
+PEDIGREE : 7 :  M7_20    M5_10    F5_20
+PEDIGREE : 7 :  M7_21    M5_14    F5_20
+PEDIGREE : 7 :  M7_22    M5_16    F5_20
+PEDIGREE : 7 :  F7_13    M5_20    F5_22
+PEDIGREE : 7 :  F7_14    M5_8    F5_22
+PEDIGREE : 7 :  F7_15    M5_16    F5_22
+PEDIGREE : 7 :  M7_23    M5_16    F5_22
+PEDIGREE : 7 :  F7_16    M5_11    F5_23
+PEDIGREE : 7 :  F7_17    M5_7    F5_23
+PEDIGREE : 7 :  M7_24    M5_17    F5_23
+PEDIGREE : 7 :  M7_25    M5_16    F5_23
+PEDIGREE : 7 :  M7_26    M5_6    F5_23
+PEDIGREE : 7 :  M7_27    M5_7    F5_23
+PEDIGREE : 7 :  F7_18    M5_20    F5_25
+PEDIGREE : 7 :  F7_19    M5_16    F5_25
+PEDIGREE : 7 :  F7_20    M5_6    F5_25
+PEDIGREE : 7 :  M7_28    M5_3    F5_25
+VERBIAGE : Done with this generation
+VERBIAGE :  Exiting MakeBabies()
+POST_REPROD_CENSUS_AGES :           7  :	1	2
+POST_REPROD_CENSUS_COUNTS : MALES  : 7  :	14	11
+POST_REPROD_CENSUS_COUNTS : FEM    : 7  :	14	8
+PREKILL_CENSUS_AGES :           8  :	0	1
+PREKILL_CENSUS_COUNTS : MALES  : 8  :	29	14
+PREKILL_CENSUS_COUNTS : FEM    : 8  :	21	14
+POSTKILL_CENSUS_AGES :           8  :	1	2
+POSTKILL_CENSUS_COUNTS : MALES  : 8  :	13	9
+POSTKILL_CENSUS_COUNTS : FEM    : 8  :	15	12
+
+VERBIAGE :   Entering MakeBabies : t=8     N=50
+VERBIAGE :  Mean Num Offspring per Female  (NumFemalesRemaining) and [ProbOfReproducing] of Different Ages  : 0.000 ( 15 ) [ 0.000 ]    4.167 ( 12 ) [ 1.000 ]    
+PEDIGREE : 8 :  M8_0    M6_13    F6_0
+PEDIGREE : 8 :  M8_1    M6_22    F6_0
+PEDIGREE : 8 :  M8_2    M6_0    F6_0
+PEDIGREE : 8 :  M8_3    M6_6    F6_0
+PEDIGREE : 8 :  F8_0    M6_13    F6_4
+PEDIGREE : 8 :  F8_1    M6_8    F6_4
+PEDIGREE : 8 :  F8_2    M6_7    F6_4
+PEDIGREE : 8 :  M8_4    M6_9    F6_4
+PEDIGREE : 8 :  M8_5    M6_9    F6_4
+PEDIGREE : 8 :  M8_6    M6_21    F6_4
+PEDIGREE : 8 :  F8_3    M6_0    F6_5
+PEDIGREE : 8 :  M8_7    M6_0    F6_5
+PEDIGREE : 8 :  M8_8    M6_13    F6_5
+PEDIGREE : 8 :  M8_9    M6_22    F6_5
+PEDIGREE : 8 :  M8_10    M6_21    F6_5
+PEDIGREE : 8 :  F8_4    M6_6    F6_8
+PEDIGREE : 8 :  M8_11    M6_0    F6_8
+PEDIGREE : 8 :  F8_5    M6_9    F6_9
+PEDIGREE : 8 :  F8_6    M6_0    F6_9
+PEDIGREE : 8 :  F8_7    M6_6    F6_9
+PEDIGREE : 8 :  M8_12    M6_22    F6_9
+PEDIGREE : 8 :  M8_13    M6_13    F6_9
+PEDIGREE : 8 :  M8_14    M6_0    F6_9
+PEDIGREE : 8 :  M8_15    M6_13    F6_9
+PEDIGREE : 8 :  F8_8    M6_13    F6_10
+PEDIGREE : 8 :  F8_9    M6_21    F6_10
+PEDIGREE : 8 :  M8_16    M6_0    F6_10
+PEDIGREE : 8 :  M8_17    M6_9    F6_11
+PEDIGREE : 8 :  M8_18    M6_22    F6_11
+PEDIGREE : 8 :  M8_19    M6_9    F6_11
+PEDIGREE : 8 :  M8_20    M6_1    F6_11
+PEDIGREE : 8 :  F8_10    M6_6    F6_16
+PEDIGREE : 8 :  M8_21    M6_13    F6_16
+PEDIGREE : 8 :  M8_22    M6_1    F6_17
+PEDIGREE : 8 :  F8_11    M6_21    F6_21
+PEDIGREE : 8 :  F8_12    M6_13    F6_21
+PEDIGREE : 8 :  F8_13    M6_7    F6_21
+PEDIGREE : 8 :  M8_23    M6_8    F6_21
+PEDIGREE : 8 :  M8_24    M6_8    F6_21
+PEDIGREE : 8 :  M8_25    M6_9    F6_21
+PEDIGREE : 8 :  F8_14    M6_0    F6_23
+PEDIGREE : 8 :  F8_15    M6_8    F6_23
+PEDIGREE : 8 :  F8_16    M6_0    F6_23
+PEDIGREE : 8 :  M8_26    M6_7    F6_23
+PEDIGREE : 8 :  M8_27    M6_7    F6_23
+PEDIGREE : 8 :  M8_28    M6_6    F6_23
+PEDIGREE : 8 :  M8_29    M6_7    F6_25
+PEDIGREE : 8 :  M8_30    M6_6    F6_25
+PEDIGREE : 8 :  M8_31    M6_21    F6_25
+PEDIGREE : 8 :  M8_32    M6_1    F6_25
+VERBIAGE : Done with this generation
+VERBIAGE :  Exiting MakeBabies()
+POST_REPROD_CENSUS_AGES :           8  :	1	2
+POST_REPROD_CENSUS_COUNTS : MALES  : 8  :	13	9
+POST_REPROD_CENSUS_COUNTS : FEM    : 8  :	15	12
+PREKILL_CENSUS_AGES :           9  :	0	1
+PREKILL_CENSUS_COUNTS : MALES  : 9  :	33	13
+PREKILL_CENSUS_COUNTS : FEM    : 9  :	17	15
+POSTKILL_CENSUS_AGES :           9  :	1	2
+POSTKILL_CENSUS_COUNTS : MALES  : 9  :	21	9
+POSTKILL_CENSUS_COUNTS : FEM    : 9  :	5	7
+
+VERBIAGE :   Entering MakeBabies : t=9     N=50
+VERBIAGE :  Mean Num Offspring per Female  (NumFemalesRemaining) and [ProbOfReproducing] of Different Ages  : 0.000 ( 5 ) [ 0.000 ]    7.143 ( 7 ) [ 1.000 ]    
+PEDIGREE : 9 :  F9_0    M7_21    F7_3
+PEDIGREE : 9 :  F9_1    M7_21    F7_3
+PEDIGREE : 9 :  M9_0    M7_23    F7_3
+PEDIGREE : 9 :  M9_1    M7_3    F7_3
+PEDIGREE : 9 :  M9_2    M7_17    F7_3
+PEDIGREE : 9 :  F9_2    M7_21    F7_6
+PEDIGREE : 9 :  F9_3    M7_3    F7_6
+PEDIGREE : 9 :  M9_3    M7_10    F7_6
+PEDIGREE : 9 :  M9_4    M7_1    F7_6
+PEDIGREE : 9 :  F9_4    M7_1    F7_9
+PEDIGREE : 9 :  F9_5    M7_17    F7_9
+PEDIGREE : 9 :  F9_6    M7_4    F7_9
+PEDIGREE : 9 :  M9_5    M7_1    F7_9
+PEDIGREE : 9 :  M9_6    M7_10    F7_9
+PEDIGREE : 9 :  M9_7    M7_10    F7_9
+PEDIGREE : 9 :  F9_7    M7_10    F7_10
+PEDIGREE : 9 :  M9_8    M7_21    F7_10
+PEDIGREE : 9 :  M9_9    M7_10    F7_10
+PEDIGREE : 9 :  M9_10    M7_12    F7_10
+PEDIGREE : 9 :  M9_11    M7_4    F7_10
+PEDIGREE : 9 :  M9_12    M7_4    F7_10
+PEDIGREE : 9 :  M9_13    M7_1    F7_10
+PEDIGREE : 9 :  F9_8    M7_3    F7_11
+PEDIGREE : 9 :  F9_9    M7_1    F7_11
+PEDIGREE : 9 :  M9_14    M7_17    F7_11
+PEDIGREE : 9 :  M9_15    M7_3    F7_11
+PEDIGREE : 9 :  M9_16    M7_10    F7_11
+PEDIGREE : 9 :  M9_17    M7_12    F7_11
+PEDIGREE : 9 :  M9_18    M7_1    F7_11
+PEDIGREE : 9 :  F9_10    M7_23    F7_12
+PEDIGREE : 9 :  F9_11    M7_12    F7_12
+PEDIGREE : 9 :  F9_12    M7_4    F7_12
+PEDIGREE : 9 :  F9_13    M7_3    F7_12
+PEDIGREE : 9 :  F9_14    M7_4    F7_12
+PEDIGREE : 9 :  M9_19    M7_21    F7_12
+PEDIGREE : 9 :  M9_20    M7_23    F7_12
+PEDIGREE : 9 :  M9_21    M7_10    F7_12
+PEDIGREE : 9 :  M9_22    M7_21    F7_12
+PEDIGREE : 9 :  F9_15    M7_1    F7_15
+PEDIGREE : 9 :  F9_16    M7_12    F7_15
+PEDIGREE : 9 :  F9_17    M7_10    F7_15
+PEDIGREE : 9 :  F9_18    M7_21    F7_15
+PEDIGREE : 9 :  F9_19    M7_4    F7_15
+PEDIGREE : 9 :  F9_20    M7_4    F7_15
+PEDIGREE : 9 :  F9_21    M7_21    F7_15
+PEDIGREE : 9 :  M9_23    M7_21    F7_15
+PEDIGREE : 9 :  M9_24    M7_14    F7_15
+PEDIGREE : 9 :  M9_25    M7_14    F7_15
+PEDIGREE : 9 :  M9_26    M7_17    F7_15
+PEDIGREE : 9 :  M9_27    M7_12    F7_15
+VERBIAGE : Done with this generation
+VERBIAGE :  Exiting MakeBabies()
+POST_REPROD_CENSUS_AGES :           9  :	1	2
+POST_REPROD_CENSUS_COUNTS : MALES  : 9  :	21	9
+POST_REPROD_CENSUS_COUNTS : FEM    : 9  :	5	7
+PREKILL_CENSUS_AGES :           10  :	0	1
+PREKILL_CENSUS_COUNTS : MALES  : 10  :	28	21
+PREKILL_CENSUS_COUNTS : FEM    : 10  :	22	5
+POSTKILL_CENSUS_AGES :           10  :	1	2
+POSTKILL_CENSUS_COUNTS : MALES  : 10  :	16	15
+POSTKILL_CENSUS_COUNTS : FEM    : 10  :	10	5
+
+VERBIAGE :   Entering MakeBabies : t=10     N=50
+VERBIAGE :  Mean Num Offspring per Female  (NumFemalesRemaining) and [ProbOfReproducing] of Different Ages  : 0.000 ( 10 ) [ 0.000 ]    10.000 ( 5 ) [ 1.000 ]    
+PEDIGREE : 10 :  F10_0    M8_7    F8_0
+PEDIGREE : 10 :  F10_1    M8_15    F8_0
+PEDIGREE : 10 :  F10_2    M8_0    F8_0
+PEDIGREE : 10 :  F10_3    M8_23    F8_0
+PEDIGREE : 10 :  F10_4    M8_12    F8_0
+PEDIGREE : 10 :  F10_5    M8_24    F8_0
+PEDIGREE : 10 :  F10_6    M8_27    F8_0
+PEDIGREE : 10 :  F10_7    M8_5    F8_0
+PEDIGREE : 10 :  F10_8    M8_14    F8_0
+PEDIGREE : 10 :  M10_0    M8_15    F8_0
+PEDIGREE : 10 :  M10_1    M8_17    F8_0
+PEDIGREE : 10 :  M10_2    M8_6    F8_0
+PEDIGREE : 10 :  M10_3    M8_7    F8_0
+PEDIGREE : 10 :  F10_9    M8_23    F8_5
+PEDIGREE : 10 :  F10_10    M8_6    F8_5
+PEDIGREE : 10 :  F10_11    M8_4    F8_5
+PEDIGREE : 10 :  F10_12    M8_6    F8_5
+PEDIGREE : 10 :  F10_13    M8_12    F8_5
+PEDIGREE : 10 :  F10_14    M8_30    F8_5
+PEDIGREE : 10 :  M10_4    M8_18    F8_5
+PEDIGREE : 10 :  M10_5    M8_14    F8_5
+PEDIGREE : 10 :  M10_6    M8_7    F8_5
+PEDIGREE : 10 :  M10_7    M8_5    F8_5
+PEDIGREE : 10 :  F10_15    M8_12    F8_6
+PEDIGREE : 10 :  F10_16    M8_12    F8_6
+PEDIGREE : 10 :  F10_17    M8_6    F8_6
+PEDIGREE : 10 :  F10_18    M8_14    F8_6
+PEDIGREE : 10 :  F10_19    M8_18    F8_6
+PEDIGREE : 10 :  F10_20    M8_23    F8_6
+PEDIGREE : 10 :  M10_8    M8_17    F8_6
+PEDIGREE : 10 :  M10_9    M8_4    F8_6
+PEDIGREE : 10 :  F10_21    M8_18    F8_7
+PEDIGREE : 10 :  F10_22    M8_15    F8_7
+PEDIGREE : 10 :  F10_23    M8_23    F8_7
+PEDIGREE : 10 :  F10_24    M8_15    F8_7
+PEDIGREE : 10 :  F10_25    M8_17    F8_7
+PEDIGREE : 10 :  F10_26    M8_17    F8_7
+PEDIGREE : 10 :  F10_27    M8_0    F8_7
+PEDIGREE : 10 :  M10_10    M8_4    F8_7
+PEDIGREE : 10 :  M10_11    M8_0    F8_7
+PEDIGREE : 10 :  M10_12    M8_7    F8_7
+PEDIGREE : 10 :  F10_28    M8_17    F8_11
+PEDIGREE : 10 :  F10_29    M8_24    F8_11
+PEDIGREE : 10 :  M10_13    M8_24    F8_11
+PEDIGREE : 10 :  M10_14    M8_17    F8_11
+PEDIGREE : 10 :  M10_15    M8_3    F8_11
+PEDIGREE : 10 :  M10_16    M8_15    F8_11
+PEDIGREE : 10 :  M10_17    M8_7    F8_11
+PEDIGREE : 10 :  M10_18    M8_12    F8_11
+PEDIGREE : 10 :  M10_19    M8_12    F8_11
+VERBIAGE : Done with this generation
+VERBIAGE :  Exiting MakeBabies()
+POST_REPROD_CENSUS_AGES :           10  :	1	2
+POST_REPROD_CENSUS_COUNTS : MALES  : 10  :	16	15
+POST_REPROD_CENSUS_COUNTS : FEM    : 10  :	10	5
+PREKILL_CENSUS_AGES :           11  :	0	1
+PREKILL_CENSUS_COUNTS : MALES  : 11  :	20	16
+PREKILL_CENSUS_COUNTS : FEM    : 11  :	30	10
+POSTKILL_CENSUS_AGES :           11  :	1	2
+POSTKILL_CENSUS_COUNTS : MALES  : 11  :	8	11
+POSTKILL_CENSUS_COUNTS : FEM    : 11  :	17	10
+
+VERBIAGE :   Entering MakeBabies : t=11     N=50
+VERBIAGE :  Mean Num Offspring per Female  (NumFemalesRemaining) and [ProbOfReproducing] of Different Ages  : 0.000 ( 17 ) [ 0.000 ]    5.000 ( 10 ) [ 1.000 ]    
+PEDIGREE : 11 :  M11_0    M9_9    F9_2
+PEDIGREE : 11 :  M11_1    M9_0    F9_2
+PEDIGREE : 11 :  F11_0    M9_19    F9_5
+PEDIGREE : 11 :  F11_1    M9_6    F9_5
+PEDIGREE : 11 :  M11_2    M9_5    F9_5
+PEDIGREE : 11 :  M11_3    M9_17    F9_5
+PEDIGREE : 11 :  M11_4    M9_0    F9_5
+PEDIGREE : 11 :  F11_2    M9_0    F9_10
+PEDIGREE : 11 :  F11_3    M9_19    F9_10
+PEDIGREE : 11 :  M11_5    M9_3    F9_10
+PEDIGREE : 11 :  M11_6    M9_19    F9_10
+PEDIGREE : 11 :  M11_7    M9_17    F9_10
+PEDIGREE : 11 :  M11_8    M9_6    F9_10
+PEDIGREE : 11 :  F11_4    M9_14    F9_11
+PEDIGREE : 11 :  F11_5    M9_9    F9_11
+PEDIGREE : 11 :  F11_6    M9_17    F9_11
+PEDIGREE : 11 :  F11_7    M9_17    F9_11
+PEDIGREE : 11 :  F11_8    M9_20    F9_11
+PEDIGREE : 11 :  F11_9    M9_22    F9_11
+PEDIGREE : 11 :  M11_9    M9_22    F9_11
+PEDIGREE : 11 :  M11_10    M9_20    F9_11
+PEDIGREE : 11 :  F11_10    M9_17    F9_12
+PEDIGREE : 11 :  F11_11    M9_19    F9_12
+PEDIGREE : 11 :  M11_11    M9_20    F9_12
+PEDIGREE : 11 :  M11_12    M9_19    F9_12
+PEDIGREE : 11 :  M11_13    M9_22    F9_12
+PEDIGREE : 11 :  F11_12    M9_21    F9_13
+PEDIGREE : 11 :  F11_13    M9_6    F9_13
+PEDIGREE : 11 :  M11_14    M9_9    F9_13
+PEDIGREE : 11 :  F11_14    M9_14    F9_14
+PEDIGREE : 11 :  F11_15    M9_5    F9_14
+PEDIGREE : 11 :  F11_16    M9_20    F9_14
+PEDIGREE : 11 :  F11_17    M9_17    F9_14
+PEDIGREE : 11 :  F11_18    M9_9    F9_14
+PEDIGREE : 11 :  M11_15    M9_14    F9_14
+PEDIGREE : 11 :  M11_16    M9_14    F9_14
+PEDIGREE : 11 :  F11_19    M9_14    F9_16
+PEDIGREE : 11 :  F11_20    M9_6    F9_16
+PEDIGREE : 11 :  F11_21    M9_3    F9_16
+PEDIGREE : 11 :  M11_17    M9_9    F9_16
+PEDIGREE : 11 :  F11_22    M9_0    F9_18
+PEDIGREE : 11 :  F11_23    M9_22    F9_18
+PEDIGREE : 11 :  F11_24    M9_9    F9_18
+PEDIGREE : 11 :  M11_18    M9_20    F9_18
+PEDIGREE : 11 :  M11_19    M9_0    F9_18
+PEDIGREE : 11 :  M11_20    M9_9    F9_18
+PEDIGREE : 11 :  F11_25    M9_9    F9_19
+PEDIGREE : 11 :  F11_26    M9_9    F9_19
+PEDIGREE : 11 :  M11_21    M9_0    F9_19
+PEDIGREE : 11 :  M11_22    M9_0    F9_19
+VERBIAGE : Done with this generation
+VERBIAGE :  Exiting MakeBabies()
+POST_REPROD_CENSUS_AGES :           11  :	1	2
+POST_REPROD_CENSUS_COUNTS : MALES  : 11  :	8	11
+POST_REPROD_CENSUS_COUNTS : FEM    : 11  :	17	10
+VERBIAGE :  Finished on random seeds: 935706524 832066842 : printed to spip_seeds

@@ -1,0 +1,17 @@
+& This is a sample demography.
+In no wawy is it meant to 
+any real bird species
+(or anything real for that matter)
+it's just an example! &
+
+-A 5
+-T 20
+-s .4 .5 .9 .9 .6
+-f 0 2 5 5 4 
+--fem-prob-repro 0 .8 1 1 .5
+-m 0 1 2 5 2 
+--male-prob-repro 0 1 1 .7 .5
+--initial-males 35 30 25 20 15 
+--initial-females 35 30 25 20 15
+--cohort-size const 75
+--mate-fidelity 0

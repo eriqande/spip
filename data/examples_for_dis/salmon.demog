@@ -1,0 +1,15 @@
+& This is similar to a pink salmon demography.
+However, in NO way is meant to represent an 
+actual salmon demography, it's just an example! &
+
+-A 2
+-T 10
+-s .5 .7
+-f 0 1
+--fem-prob-repro 0 1
+--initial-females 50 40
+-m 0 1
+--male-prob-repro 0 1
+--initial-males 50 40
+--fixed-cohort-size
+--cohort-size const 50

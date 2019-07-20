@@ -1,0 +1,8 @@
+& generic bird gtyp &
+
+--locus-file locpars
+--discard-all 5
+--gtyp-ppn-fem-post 7,8,9,13,15,21 .1 .1 .1 .1
+--gtyp-ppn-male-post 6,8,9,15,20 .1 .1 .1 .1
+--gtyp-ppn-fem-pre 6,7,8,13,20 .2 .2 .2 .2 .2 
+--gtyp-ppn-male-pre 6,8,13,20 .2 .2 .2 .2 .2 

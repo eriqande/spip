@@ -1,0 +1,5 @@
+& this is the genotype file for generic salmon &
+
+--locus-file locpars
+--discard-parents 4
+--gtyps-for-all 3,4,7,10

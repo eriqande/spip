@@ -1,0 +1,48 @@
+Welcome!
+
+The  purpose of this tutorial is to give you a brief introduction
+on how to use spip and make sure that your installation is  work-
+ing properly.  It is assumed that at this point you have followed
+the directions in the README and have  properly  installed  spip.
+Typing  "spip --help" will return a short list of all program op-
+tions and associated arguments.  A detailed explanation  of  pro-
+gram  options,  associated  arguments, and output can be found in
+the man pages and accompanying pdf.
+
+For this tutorial we will be using the files in the /examples di-
+rectory.   It should contain the files locpars, salmon.demog, and
+salmon.gtyp amongst others.  Make sure that your current  working
+directory  is  the  examples  directory.  For your first run type
+"spip --command-file salmon.demog".  You should see a lot of  in-
+formation  printed  to  stdout (see man or pdf for explanation of
+output).  If you compare this to the salmon.demog.out  file  they
+should  look  very  similar.  (They will differ only because they
+have probably used different starting seeds for the random number
+generator.)
+
+The  above  example is simple, but it lacks any interesting geno-
+type data.  To keep inforamtion more organized demographic infor-
+mation  is  stored in files with the ".demog" extension and geno-
+type data in files with the ".gtyp" extension.  You don't have to
+give  the  files these extensions, but it is a useful convention.
+This time type "spip --command-file  salmon.demog  --command-file
+salmon.gtyp".   That should give you the same output as last time
+plus genotype data.    Compare your output  with  that  found  in
+the salmon.demog_with_gtyp.out file.  At this point your genotype
+results may differ from our example results, again,  because  you
+have  probably  used a different random seed.   The fact that our
+genotype results are different is of little concern,  the  impor-
+tant part is that the layout of the results is the same.
+
+That's it!  The overall format for using spip is "spip --command-
+file NAME_OF_FILE [options] ".  It should be noted that [options]
+can  be specified both within the command file and at the command
+prompt.  In fact, you don't even need to put the options  into  a
+command  file,  you  could just write them all out on the command
+line (but that gets a little lengthy  and  cumbersome!)   In  the
+/examples  directory  you  will find other demographies and geno-
+types (with accompanying reference outputs) to experiment with.
+
+Enjoy!
+
+eric & kevin
