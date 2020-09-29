@@ -93,7 +93,7 @@ typedef struct {  /* a structure to hold all the population-specific parameters 
 	
 	double MateSpec;  /* the mate specificity parameter */
 	
-	/*	int YearlyVarSwitch;  /* whether the male reproductive rates are "sticky" across years
+	/*	int YearlyVarSwitch;  whether the male reproductive rates are "sticky" across years
 	 or not */
 	
 	double SexRatio;  /* prob that a newborn is a male */
@@ -491,7 +491,7 @@ int main(int argc, char **argv)
 	
 	
 	/**  This is where individuals get marked if they are to be "cohort-sampled"  THIS HAS BEEN DEPRECATED **/
-	/*for(bp=0;bp<NumPops;bp++)  {  /* cycle over all the locales */
+	/*for(bp=0;bp<NumPops;bp++)  {   cycle over all the locales */
 	/*	L = LocaleArray[bp];
 	 if(L->S.SampleNewbornsOnly==1) {
 	 MarkSampledNewborns(L->S,L->NM,L->NF,L->Males,L->Females,bp);

@@ -1,0 +1,52 @@
+---
+title: "SPIP -- simulate pedigrees in populations"
+output: 
+  github_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Installation and compilation
+
+You need a C compiler and git.  With those, you can clone this project
+and compile the code into the spip binary like this in your Unix terminal:
+
+```sh
+# first clone it from GitHub, and get a submodule for it
+git clone https://github.com/eriqande/spip.git
+cd spip
+git submodule init
+git submodule update
+
+
+# then compile it using the provided shell script
+./CompileSpip.sh 
+```
+
+There will be a couple of warnings when you compile, but nothing fatal.
+
+## Quick documentation
+
+After that, you can get the short help for spip by typing `./spip --help`.  It will
+spit out a short listing of the options.
+```{sh}
+./spip --help
+```
+
+If you want more complete information about that, use
+```sh
+./spip --help-full
+```
+
+You may wish to put `spip` in your PATH.
+
+## Tutorial files
+
+Now, to learn how to use spip, you can use the tutorial.  Do like this first:
+```{sh, eval=FALSE}
+cp -r data/examples_for_dis ./
+mv examples_for_dis examples
+```

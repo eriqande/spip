@@ -9,7 +9,7 @@ tions and associated arguments.  A detailed explanation  of  pro-
 gram  options,  associated  arguments, and output can be found in
 the man pages and accompanying pdf.
 
-For this tutorial we will be using the files in the /examples di-
+For this tutorial we will be using the files in the ./examples di-
 rectory.   It should contain the files locpars, salmon.demog, and
 salmon.gtyp amongst others.  Make sure that your current  working
 directory  is  the  examples  directory.  For your first run type
