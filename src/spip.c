@@ -897,7 +897,7 @@ void AYearInTheLife(Locale *L, int t, int bp, Locale **LA, int NumPops)
 	/* post-death random sampling of juveniles and adults */
 	PostDeathSample(t, L->MA, L->S, L->NM, L->NF, L->Males, L->Females, bp, L->NMR, L->NFR );
 	
-	/*  print out the pre-kill census for males and females */
+	/*  print out the post-kill census for males and females */
 	PrintCensusSizes(t,L->MA,L->NFR,L->NMR,"POSTKILL_CENSUS_",1,bp);
 	
 	/* set the cohort size for this time */

@@ -1,3 +1,6 @@
+
+BIN=spip-$(uname)
+
 gcc -O3 -o spip  \
 	src/spip.c \
 	eca-shared/ranlib/src/com.c \
