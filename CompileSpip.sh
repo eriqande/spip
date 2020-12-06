@@ -1,7 +1,7 @@
 
 BIN=spip-$(uname)
 
-gcc -O3 -o spip  \
+gcc -O3 -o $BIN  \
 	src/spip.c \
 	eca-shared/ranlib/src/com.c \
 	eca-shared/ranlib/linpack/linpack.c \
