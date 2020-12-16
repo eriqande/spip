@@ -320,7 +320,7 @@ int ***gPotMig, ****gMig;  /* for counting overall the number of migrants and "p
  and gMig is subscripted by [MALE/FEMALE][POP][AGE][DESTINATION] */
 
 
-int main(int argc, char **argv) 
+int spip_main(int argc, char **argv) 
 {
 	int i,l,t;
 	int T=0;  /* the number of new cohorts to produce */
@@ -560,6 +560,11 @@ int main(int argc, char **argv)
 }
 
 
+int main(int argc, char **argv) {
+  int ret;
+  ret = spip_main(argc, argv);
+  return(ret);
+}
 
 /* print a summary report about migration that occurred during the whole simulation */
 void PrintMigrantSummary(int ****M, int ***P, int NP, int MA)
