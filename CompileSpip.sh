@@ -2,6 +2,7 @@
 BIN=spip-$(uname)
 
 gcc -O3 -o $BIN  \
+  -Wno-incompatible-pointer-types-discards-qualifiers \
 	src/spip.c \
 	eca-shared/ranlib/src/com.c \
 	eca-shared/ranlib/linpack/linpack.c \
