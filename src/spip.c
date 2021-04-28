@@ -889,7 +889,7 @@ void AYearInTheLife(Locale *L, int t, int bp, Locale **LA, int NumPops)
 	PreDeathSample(t, L->MA, L->S, L->NM, L->NF, L->Males, L->Females,bp, L->NMR, L->NFR );
 	
 	/*  print out the pre-kill census for males and females */
-	PrintCensusSizes(t,L->MA,L->NFR,L->NMR,"PREKILL_CENSUS_",0,bp);
+	PrintCensusSizes(t,L->MA,L->NFR,L->NMR,"PREKILL_CENSUS_",1,bp);
 	
 	/* survival from the last year to the current year's reproducing group */
 	StandardAnnualDieOff(t, L->MA, L->NM, L->NF, L->Males, L->Females, L->NMR, L->NFR, L->P);
@@ -909,7 +909,7 @@ void AYearInTheLife(Locale *L, int t, int bp, Locale **LA, int NumPops)
 	}
 	
 	/* print the post-reproduction census sizes for males and females */
-	PrintCensusSizes(t,L->MA,L->NFR,L->NMR,"POST_REPROD_CENSUS_",1,bp);
+	PrintCensusSizes(t,L->MA,L->NFR,L->NMR,"POST_REPROD_CENSUS_",0,bp);
 	
 }
 
@@ -977,7 +977,7 @@ void PreDeathSample(int t, int MA, SampPars S, int *NM, int *NF, indiv **Males, 
 void PostDeathSample(int t, int MA, SampPars S, int *NM, int *NF, indiv **Males, indiv **Females, int locale, int *NMR, int *NFR )
 {
 	int at,age;
-	for(age=1;age<MA;age++)  {
+	for(age=1;age<=MA;age++)  {
 		at = t - age;  /* time subscript for an individual of age "age" at time t */ 
 		if(S.post_male_samp != NULL && S.post_male_samp_years[t]) MarkAsSampled(Males[at],NM[at],S.post_male_samp[age],AFT_KILL,t,locale, S.LethalityProb, &(NMR[at]));
 		if(S.post_fem_samp != NULL && S.post_fem_samp_years[t]) MarkAsSampled(Females[at],NF[at],S.post_fem_samp[age],AFT_KILL,t,locale, S.LethalityProb, &(NFR[at]));
@@ -2087,18 +2087,18 @@ void PrintCensusSizes(int t, int MA, int *NFR, int *NMR, const char *string, int
 	int at,age;
 	
 	printf("%sAGES :           %d  :  %d :", string,t,whichpop);
-	for(age=0;age<MA;age++) {
-		printf("\t%d",age+age_start);
+	for(age=age_start;age<=MA;age++) {
+		printf("\t%d",age);
 	}
 	printf("\n");
 	printf("%sCOUNTS : MALES  : %d  :  %d :", string,t,whichpop);
-	for(age=1;age<=MA;age++) {
+	for(age=age_start;age<=MA;age++) {
 		at = t - age;
 		printf("\t%d",NMR[at]);
 	}
 	printf("\n");
 	printf("%sCOUNTS : FEM    : %d  :  %d :",string, t,whichpop);
-	for(age=1;age<=MA;age++) {
+	for(age=age_start;age<=MA;age++) {
 		at = t - age;
 		printf("\t%d",NFR[at]);
 	}
@@ -2299,9 +2299,10 @@ void KillOff(indiv *I, int N, int *NR, double s, int t)
 			if( ranf() > s) {
 				I[i].dead = 1;
 				(*NR)--;
-								/* note that the age and time of death here reflect dying at the end of the previous time
-								   step, rather than dying at the beginning of the current time step. */
-								printf("KILLING:  Just Killed individual : %s  at time %d at age %d\n",I[i].ID,t-1,t-I[i].t-1);
+								/* note that the age and time of death here used to reflect dying at the end of the previous time
+								   step, rather than dying at the beginning of the current time step. But I have changed that
+								   to be the actual age in the actual time step. */
+								printf("KILLING:  Just Killed individual : %s  at time %d at age %d\n",I[i].ID,t,t-I[i].t);
 				
 			}
 		}
@@ -4268,7 +4269,7 @@ int ProcessOptions(int *output_argc, char **output_argv[], PopPars *P,int *T, in
 	if(CLASHABLE_OPTION(GtypAPropFemPost_Flag, 
 						,
 						gtyp-ppn-fem-post,
-						G R1~R2:R_MA-1,
+						G R1~R2:R_MA,
 						genotype a proportion of females randomly after death episode,
 						this causes the program to randomly sample living females
 						in the years specified by range G after the episode of death and survival.   The probability 
@@ -4280,11 +4281,11 @@ int ProcessOptions(int *output_argc, char **output_argv[], PopPars *P,int *T, in
 						--discard-all or which are after T + MaxAge - 1 will be ignored. ,
 						NewbornSampFlag,
 						is used in conjunction with --newborn-samp) ) {
-		if(REQ_FOR_SAMPLING && ARGS_EQ(P->MaxAge) )	{ char therange[10000];
+		if(REQ_FOR_SAMPLING && ARGS_EQ(P->MaxAge+1) )	{ char therange[10000];
 			GET_STR(therange);
 			S->post_fem_samp_years = StringToIntArray(therange, P->DiscardBefore, *T + P->MaxAge-1, 1);
-			if(S->post_fem_samp==NULL) S->post_fem_samp = (double *)ECA_CALLOC(P->MaxAge, sizeof(double));
-			for(j=1;j<P->MaxAge;j++)  {
+			if(S->post_fem_samp==NULL) S->post_fem_samp = (double *)ECA_CALLOC(P->MaxAge+1, sizeof(double));
+			for(j=1;j<=P->MaxAge;j++)  {
 				S->post_fem_samp[j] = GET_DUB;
 			}
 		}	
@@ -4292,7 +4293,7 @@ int ProcessOptions(int *output_argc, char **output_argv[], PopPars *P,int *T, in
 	if(CLASHABLE_OPTION(GtypAPropMalePost_Flag, 
 						,
 						gtyp-ppn-male-post,
-						G R1~R2:R_MA-1,
+						G R1~R2:R_MA,
 						genotype a proportion of males randomly after death episode,
 						this causes the program to randomly sample living males
 						in the years specified by range G after the episode of death and survival.   The probability 
@@ -4304,11 +4305,11 @@ int ProcessOptions(int *output_argc, char **output_argv[], PopPars *P,int *T, in
 						--discard-all or which are after T + MaxAge - 1 will be ignored. ,
 						NewbornSampFlag,
 						is used in conjunction with --newborn-samp) ) {
-		if(REQ_FOR_SAMPLING && ARGS_EQ(P->MaxAge) )	{  char therange[10000];
+		if(REQ_FOR_SAMPLING && ARGS_EQ(P->MaxAge+1) )	{  char therange[10000];
 			GET_STR(therange);
 			S->post_male_samp_years = StringToIntArray(therange, P->DiscardBefore, *T + P->MaxAge-1, 1);
-			if(S->post_male_samp==NULL) S->post_male_samp = (double *)ECA_CALLOC(P->MaxAge, sizeof(double));
-			for(j=1;j<P->MaxAge;j++)  {
+			if(S->post_male_samp==NULL) S->post_male_samp = (double *)ECA_CALLOC(P->MaxAge+1, sizeof(double));
+			for(j=1;j<=P->MaxAge;j++)  {
 				S->post_male_samp[j] = GET_DUB;
 			}
 		}	
