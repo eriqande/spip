@@ -2742,6 +2742,7 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 		
 		/* and here we normalize the MaleProbsSG's and then make them cumulative probs */
 		for(i=0;i<NumMaleSpawnGroups;i++)  { double normo;
+		  normo = 0.0;
 			for(j=0;j<NumMalesContributingSG[i];j++) {
 				normo += MaleProbsSG[i][j];
 			}
