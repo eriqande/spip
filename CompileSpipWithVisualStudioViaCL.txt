@@ -1,0 +1,10 @@
+# this is just a command line that can be pasted into the
+# Developer Command Prompt.  
+
+# After installing the community version of Visual Studio
+# on a Windoze machine, search for the
+# "Developer Command Prompt for VS", and then navigate to
+# the spip directory and paste this command in at the command
+# prompt:
+
+cl /O2 /I eca-shared/ecalibs /I eca-shared/ranlib/src /Fespip-Windows.exe src/spip.c  eca-shared/ranlib/src/com.c  eca-shared/ranlib/linpack/linpack.c eca-shared/ranlib/src/ranlib.c eca-shared/ecalibs/ECA_Opt2.c eca-shared/ecalibs/ECA_MemAlloc.c  eca-shared/ecalibs/MathStatRand.c  eca-shared/ecalibs/MCTypesEtc.c
