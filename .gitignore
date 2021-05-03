@@ -6,3 +6,7 @@ spip
 examples
 spip.dSYM
 spip_seeds
+*.obj
+ut
+gawk.exe
+spip-MINGW64_NT-10.0-18363
