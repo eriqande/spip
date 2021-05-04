@@ -1,9 +1,9 @@
 # this is just a command line that can be pasted into the
-# Developer Command Prompt.  
+# x64 Native Tools Command Prompt for VS
 
 # After installing the community version of Visual Studio
 # on a Windoze machine, search for the
-# "Developer Command Prompt for VS", and then navigate to
+# "x64 Native Tools Command Prompt for VS", and then navigate to
 # the spip directory and paste this command in at the command
 # prompt:
 
