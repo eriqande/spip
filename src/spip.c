@@ -1088,10 +1088,10 @@ void PrintPars(PopPars P, PopSizePars Pop, SampPars S, int T)
 		for(sex=0;sex<2;sex++)  {
 			for(i=1;i<=P.MaxAge;i++)  { int j;
 				printf("SETUP : MigPars_OutAndIn : time= %3d  : sex= %s  :  age= %3d  :  ",t,(sex==0 ? "MALE  " : "FEMALE" ),i);
-				printf(" outrate= %.5f   :  inrates= ",P.MigPr[t][sex][i]);
+				printf(" outrate= %.5f   :  inrates= NOT REPORTED AT THE MOMENT",P.MigPr[t][sex][i]);
 				
 				for(j=0;j<gNumPops;j++)  {
-					printf(" %.5f ",P.Dest[t][sex][i][j]);
+					; //printf(" %.5f ",P.Dest[t][sex][i][j]);
 				}
 				printf("\n");
 			}

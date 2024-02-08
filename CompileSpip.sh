@@ -1,6 +1,7 @@
 
 BIN=spip-$(uname)
 
+#gcc -g -o $BIN  \
 gcc -O3 -o $BIN  \
   -Wno-incompatible-pointer-types-discards-qualifiers \
 	src/spip.c \
