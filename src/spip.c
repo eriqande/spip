@@ -2361,6 +2361,19 @@ int *ReturnLinearSpawnGroupIds(int N, int n, int SizeNotCount, int *MaxGroup, in
 	return(ret);
 }
 
+/* Reallocate space for new babies */
+void ReallocIndivArray(indiv **array_ptr, int old_size, int new_size) {
+  indiv *new_array = (indiv *)realloc(*array_ptr, new_size * sizeof(indiv));
+  if (new_array == NULL) {
+    fprintf(stderr, "REALLOC FAILED: unable to allocate %d indivs\n", new_size);
+    exit(1);
+  }
+  *array_ptr = new_array;
+  // Zero the new portion for safety
+  memset(*array_ptr + old_size, 0, (new_size - old_size) * sizeof(indiv));
+}
+
+
 
 /* make offspring for the cohort at time t.  The expected number
  to make is N.  The newborns go into M[t] and F[t].  THis is where the reproduction-mediated 
@@ -2395,9 +2408,7 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 	
 	/* 	printf("\nVERBIAGE :   Entering MakeBabies : t=%d     N=%d\n",t,N);  */
 	
-	/* allocate lots of memory to F[t] and M[t].  Make it ten times the expected number, 
-	 and maybe we can reallocate later.   THIS IS HORRIBLY INEFFICIENT ON MEMORY.  I SHOULD
-	 FIX THIS AT SOME POINT IN THE FUTURE */
+	/* Initial allocation: may be reallocated later if NF[t]+f or NM[t]+m exceeds FSpace[t]/MSpace[t] */
 	M[t] = (indiv *)ECA_CALLOC(mspaces, sizeof(indiv));
 	F[t] = (indiv *)ECA_CALLOC(fspaces, sizeof(indiv));
 	MSpace[t] = mspaces;
@@ -2854,10 +2865,14 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 			
 			
 			/* then actually put the females into this year's array */
-			if(NF[t]+f > fspaces) {  /* check to make sure there is room for them */
-				printf("\n\nToo many females at time %d.  fspaces = %d\n\nExiting\n\n",t,fspaces);
-				exit(1);
+			if (NF[t] + f > FSpace[t]) {
+			  int old_size = FSpace[t];
+			  int new_size = old_size + fspaces;  // Add another chunk
+			  printf("REALLOCING F: NF[%d] + %d > %d. Reallocating to %d\n", t, f, old_size, new_size);
+			  ReallocIndivArray(&F[t], old_size, new_size);
+			  FSpace[t] = new_size;
 			}
+			
 			for(j=NF[t];j<NF[t]+f;j++,x++)  {
 				
 				FillIndiv( &(F[t][j]), &(F[at][i]), tempFathers[x], &gID, t, j,'F',birthplace,P);
@@ -2868,10 +2883,14 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 			NFR[t]+= f;
 			
 			/* then put the males into this year's array */
-			if(NM[t]+m > mspaces) {  /* check to make sure there is room for them */
-				printf("\n\nToo many males at time %d.  mspaces = %d\n\nExiting\n\n",t,mspaces);
-				exit(1);
+			if (NM[t] + m > MSpace[t]) {
+			  int old_size = MSpace[t];
+			  int new_size = old_size + mspaces;  // Add another chunk
+			  printf("REALLOCING M: NM[%d] + %d > %d. Reallocating to %d\n", t, m, old_size, new_size);
+			  ReallocIndivArray(&M[t], old_size, new_size);
+			  MSpace[t] = new_size;
 			}
+			
 			for(j=NM[t];j<NM[t]+m;j++,x++)  {
 				FillIndiv( &(M[t][j]), &(F[at][i]), tempFathers[x], &gID, t, j,'M',birthplace,P);
 				F[at][i].OldestOffsp = &(M[t][j]);
