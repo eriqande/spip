@@ -2404,7 +2404,8 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 	int *NumMalesContributingSG; /* indexed by spawner group */
 	int MaxMalesInSpawnerGroup;  /* will store the largest number of males in a spawner group if we are doing SpawnerGroupCnt*/
 	int NumMaleSpawnGroups; /* if we are doing SpawnerGroupSize, then this will tell us how many groups that makes */
-	
+	int TotAgeOffs;
+	double ExpNum;  /* for storing the total number of expected offspring from a certain age group each year. */
 	
 	/* 	printf("\nVERBIAGE :   Entering MakeBabies : t=%d     N=%d\n",t,N);  */
 	
@@ -2801,6 +2802,7 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 		printf("ZEROPOP : %d : Individuals alive, but apparently no males were chosen to reproduce\n",t); 
 	}
 	else for(age=1;age<=MA;age++)  {
+		TotAgeOffs = 0;
 		at = t - age;
 		for(i=0;i<NF[at];i++) {  int HasNoKids; /* cycle over all females */
 			
@@ -2814,8 +2816,12 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 			if(P.CohortSizesRandom==0) {  /* if we are doing the fixed cohort sizes, then we have already chosen and we just assign it */
 				x = FemNumOffs[age][i];
 			}
-			else if(F[at][i].IsReproducing==1 && HasNoKids) {   /* if they are not dead yet and if they are chosen to reproduce this year */
+			else if(F[at][i].IsReproducing==1 && HasNoKids) {  /* if they are not dead yet and if they are chosen to reproduce this year */
+				
+
 				x = NumOffspringRV(mu[age],P.Fcv, P.OffsDsn);  /* choose number of offspring */
+				
+
 				/* sample them while reproducing, if indicated */
 				if(ranf() < S.dur_repro_fem_samp &&  S.dur_fem_samp_years[t]) {
 					MarkIndAsSampled(&(F[at][i]), WHILE_REPRO, t,birthplace);
@@ -2860,6 +2866,7 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 				m=f=0;
 			}
 			
+			TotAgeOffs += x;
 			/* now use x as in index variable, so initialize it.  */
 			x = 0;
 			
@@ -2901,6 +2908,18 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 			
 			
 		} /* closes the loop over i */
+		ExpNum = mu[age] * P.FPR[age] * NFR[at];
+		if(TotAgeOffs > ExpNum + 6.0 * sqrt(ExpNum / P.Fcv)) {  /* throw an error if the value is super aberrant (i.e. more than
+				                                                     6 standard deviations higher than expected).  Occasionally we get
+				                                                     completely wacko values when we are doing variable cohort size.  
+				                                                     I suspect it is from reallocating space (maybe not?) that is
+				                                                     overwriting some internal state in ranlb.  So, if it happens, we
+				                                                     just report an error and kill it.  (It does not happen often. */
+					fprintf(stderr, "Sum of NumOffspringRV values for age %d in year %d returned a summed value %d which was more than 6 x SD larger than the expected %f.  Killing.", 
+						    age, t, TotAgeOffs, ExpNum);
+					exit(1);
+
+				}
 	}  /* closes the loop over age */
 	
 	
