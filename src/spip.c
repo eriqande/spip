@@ -902,6 +902,8 @@ void AYearInTheLife(Locale *L, int t, int bp, Locale **LA, int NumPops)
 	
 	/* set the cohort size for this time */
 	N = ReturnCohortSize(&(L->Pop),t);
+
+	fprintf(stderr, "CohortSizeReturned: year: %d  Mode: %s  CohortSizeSimulated: %d   CohortSizeParameter: %d\n", t, L->Pop.CohortSizeMode, N, L->Pop.CohortSizes[t]);
 	
 	/* Now we make offspring from the remaining females and males */
 	if(PopSizeNonZero(t,L->MA,L->NFR,L->NMR)) {
@@ -2404,6 +2406,8 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 	int *NumMalesContributingSG; /* indexed by spawner group */
 	int MaxMalesInSpawnerGroup;  /* will store the largest number of males in a spawner group if we are doing SpawnerGroupCnt*/
 	int NumMaleSpawnGroups; /* if we are doing SpawnerGroupSize, then this will tell us how many groups that makes */
+	int TotOffspring = 0;
+	int TotAgeOffs;
 	
 	
 	/* 	printf("\nVERBIAGE :   Entering MakeBabies : t=%d     N=%d\n",t,N);  */
@@ -2456,7 +2460,7 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 	/* then determine the mean number of offspring per female for each age class */
 	mu[0] = 0.0;
 	wt = (double)N/wt;
-	/* printf("VERBIAGE :  Mean Num Offspring per Female  (NumFemalesRemaining) and [ProbOfReproducing] of Different Ages  : "); */
+	/*fprintf(stderr, "VERBIAGE :  Mean Num Offspring per Female  (NumFemalesRemaining) and [ProbOfReproducing] of Different Ages  : "); */
 	for(age=1;age<=MA;age++)  {
 		at = t - age;
 		mu[age] = wt *  P.Fasrf[age];
@@ -2801,9 +2805,12 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 		printf("ZEROPOP : %d : Individuals alive, but apparently no males were chosen to reproduce\n",t); 
 	}
 	else for(age=1;age<=MA;age++)  {
+		TotAgeOffs = 0;
 		at = t - age;
 		for(i=0;i<NF[at];i++) {  int HasNoKids; /* cycle over all females */
 			
+			x = 0; /* initialize here, in case there is bleed-through from using it as an index later on */
+
 			/* do some stuff for the Reproductive Inhibition */
 			if(P.ReproInhib > 0 && F[at][i].OldestOffsp != NULL &&  F[at][i].OldestOffsp->dead==0   && t - F[at][i].OldestOffsp->t <= P.ReproInhib) {
 				HasNoKids=0;
@@ -2816,6 +2823,9 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 			}
 			else if(F[at][i].IsReproducing==1 && HasNoKids) {   /* if they are not dead yet and if they are chosen to reproduce this year */
 				x = NumOffspringRV(mu[age],P.Fcv, P.OffsDsn);  /* choose number of offspring */
+
+				if(age==1 && (t == 60 || t == 56)) fprintf(stderr, "(%d) %d ", i, x); 
+
 				/* sample them while reproducing, if indicated */
 				if(ranf() < S.dur_repro_fem_samp &&  S.dur_fem_samp_years[t]) {
 					MarkIndAsSampled(&(F[at][i]), WHILE_REPRO, t,birthplace);
@@ -2826,7 +2836,7 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 					FemDiedPostReprod[age]++;
 				}
 				
-				if(gRunTests==1) {printf("TESTING : FemMeanNumOffs : %d  %s   %f\n",t,F[at][i].ID,mu[age]);  }
+				if(t>57 && t < 64) {printf("TESTING : FemMeanNumOffs : %d  %s   %f\n",t,F[at][i].ID,mu[age]);  }
 				
 			}
 			else {
@@ -2860,6 +2870,8 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 				m=f=0;
 			}
 			
+			TotAgeOffs += x;
+			TotOffspring += x;
 			/* now use x as in index variable, so initialize it.  */
 			x = 0;
 			
@@ -2900,7 +2912,10 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 			NMR[t] += m;
 			
 			
-		} /* closes the loop over i */
+		} /* closes the loop over i */ 
+		fprintf(stderr, "TotNumOffspring in MakeBabies.  year: %d  P.Fcv: %f  age: %d  NumFem: %d  P.Fasrf[age]: %.10f  P.FPR[age]: %f  mu[age]: %f  ExpAgeOffs: %f, AgeOffs: %d  CumulNumOffsL %d\n", 
+			           t, P.Fcv, age, NFR[at], P.Fasrf[age], P.FPR[age], mu[age], mu[age] * P.FPR[age] * NFR[at], TotAgeOffs, TotOffspring);
+	
 	}  /* closes the loop over age */
 	
 	
@@ -2967,7 +2982,6 @@ void MakeBabies(indiv **F, indiv **M, int t, int MA, PopPars P, int N, int *NFR,
 	free(FemDiedPostReprod);
 	free(MaleDiedPostReprod);
 	
-	/*	printf("VERBIAGE :  Exiting MakeBabies()\n"); */
 	
 }
 
@@ -4493,9 +4507,8 @@ int ProcessOptions(int *output_argc, char **output_argv[], PopPars *P,int *T, in
 			  pointers for the next cohort\054 this is the factor by which the number of spaces is 
 			  greater than the expected number.  Basically it determines mspaces and fspaces in function MakeBabies.  By default it will be 
 			  set to 10.  But should you be doing lots of generations and not wanting to eat up so much memory\054 you can set it smaller 
-			  (like 2 for the simulations Oystein was doing).  Note that ultimately I should just realloc all those things after the 
-			  offspring are created (right at the end of MakeBabies() to reclaim that space). But\054 until I do that and debug it
-			  we have to suffer along with this.
+			  (like 2 for the simulations Oystein was doing).  Note that I have now started reallocating memory as necessary.
+			  So\054 you can typically leave alloc-extra at whatever its default value is.
 			) ) {
 		if(ARGS_EQ(1)) {
 			P->OffspringAllocOverload = GET_INT;
